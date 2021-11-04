@@ -17,8 +17,14 @@ struct ContentView: View {
             
             NoteView()
                 .tabItem {
-                    Image(systemName: "gear")
-                    Text("Notes")
+                    Image(systemName: "note.text")
+                    Text("Basic Notes")
+                }
+            
+            AdvView()
+                .tabItem {
+                    Image(systemName: "note.text.badge.plus")
+                    Text("Adv. Notes")
                 }
             
             HomeView()
@@ -29,7 +35,7 @@ struct ContentView: View {
             
             ExtraView()
                 .tabItem {
-                    Image(systemName: "list.bullet")
+                    Image(systemName: "doc")
                     Text("Extra")
                 }
         }

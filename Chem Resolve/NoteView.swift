@@ -25,7 +25,7 @@ struct NoteView: View {
                         Image(systemName: "circle.hexagongrid.circle")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("The Mole")
+                        Text("The Mole & Composition")
                     }
                 }
                 
@@ -34,16 +34,52 @@ struct NoteView: View {
                         Image(systemName: "atom")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Atoms and Ions")
+                        Text("The Atom & the Nucleus")
                     }
                 }
                 
                 NavigationLink(destination: TesterView()) {
                     HStack {
-                        Image(systemName: "plusminus")
+                        Image(systemName: "minus.circle")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Quantum Chemistry")
+                        Text("Electrons")
+                    }
+                }
+                
+                NavigationLink(destination: TesterView()) {
+                    HStack {
+                        Image(systemName: "tablecells")
+                            .frame(height: 40)
+                            .scaleEffect(1.1)
+                        Text("The Periodic Table")
+                    }
+                }
+                
+                NavigationLink(destination: TesterView()) {
+                    HStack {
+                        Image(systemName: "plus.forwardslash.minus")
+                            .frame(height: 40)
+                            .scaleEffect(1.1)
+                        Text("Ions")
+                    }
+                }
+                
+                NavigationLink(destination: TesterView()) {
+                    HStack {
+                        Image(systemName: "bolt.circle")
+                            .frame(height: 40)
+                            .scaleEffect(1.1)
+                        Text("Electromagnetism")
+                    }
+                }
+                
+                NavigationLink(destination: TesterView()) {
+                    HStack {
+                        Image(systemName: "sun.max")
+                            .frame(height: 40)
+                            .scaleEffect(1.1)
+                        Text("Atomic Spectra")
                     }
                 }
                 
@@ -52,7 +88,7 @@ struct NoteView: View {
                         Image(systemName: "circle.grid.cross")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Compounds")
+                        Text("Quantum Chemistry")
                     }
                 }
                 
@@ -61,9 +97,10 @@ struct NoteView: View {
                         Image(systemName: "flame")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Chemical Reactions")
+                        Text("Precipitation Reactions")
                     }
                 }
+                
             }
             .navigationTitle("Chemistry Notes")
         }

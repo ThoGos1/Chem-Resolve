@@ -30,6 +30,10 @@ struct ExtraView: View {
                             Text("Single Electron Orbital Graph")
                         }
                         
+                        NavigationLink(destination: ElConfigSearchView()) {
+                            Text("Electron Configuration Searcher")
+                        }
+                        
                     }
                     Text("Version: 1.0")
                 }
@@ -37,7 +41,8 @@ struct ExtraView: View {
                 Image("ChemLogo")
                     .resizable(resizingMode: .stretch)
                     .aspectRatio(contentMode: .fit)
-                    .scaleEffect(0.5)
+                    .scaleEffect(0.3)
+                    .offset(x: 0, y: 90)
             }
             .navigationTitle("Extra's")
         }

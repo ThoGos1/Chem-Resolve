@@ -67,10 +67,28 @@ struct NoteView: View {
                 
                 NavigationLink(destination: TesterView()) {
                     HStack {
-                        Image(systemName: "flame")
+                        Image(systemName: "cloud.rain.fill")
                             .frame(height: 40)
                             .scaleEffect(1.1)
                         Text("Precipitation Reactions")
+                    }
+                }
+                
+                NavigationLink(destination: TesterView()) {
+                    HStack {
+                        Image(systemName: "aqi.medium")
+                            .frame(height: 40)
+                            .scaleEffect(1.1)
+                        Text("Compounds and Molecules")
+                    }
+                }
+                
+                NavigationLink(destination: TesterView()) {
+                    HStack {
+                        Image(systemName: "textformat.abc")
+                            .frame(height: 40)
+                            .scaleEffect(1.1)
+                        Text("Chemical Nomenclature")
                     }
                 }
                 

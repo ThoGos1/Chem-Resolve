@@ -15,12 +15,21 @@ struct ElConfigSearchView: View {
     
     private let elementnamelist: [String] = ["H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si", "P", "S", "Cl", "Ar", "K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr", "Rb", "Sr", "Y", "Zr", "Nb", "Mb", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe", "Cs", "Ba", "La", "Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn", "Fr", "Ra", "Ac", "Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr", "Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"]
     
+    
+    private let affinitylist: [String] = ["72.8", "-48", "59.6", "-48", "26.9", "121.7", "-6.8", "141", "328", "-116", "52.8", "-40", "42.5", "133.6", "71", "200", "348.5", "-96", "48.4", "2.37", "18.1", "7.6", "50.6", "65.2", "-50", "15.7", "63.7", "112", "119.2", "-58", "28.9", "119", "78", "195", "324.6", "-96", "46.9", "5.03", "29.6", "41.1", "86.1", "71.9", "53", "101.3", "109.7", "53.7", "125.6", "-68", "28.9", "107.3", "103.2", "190,2", "295.2", "-77", "45.5", "13.95", "53.7", "55", "10.5", "9.4", "12.5", "15.6", "11.2", "13.2", "12.7", "33.9", "32.6", "30.1", "99", "-1.93", "23", "17.2", "31", "78.8", "5.8", "104", "150.9", "205", "222.7", "-48", "30.8", "34.4", "90.9", "136", "233.1", "-68", "46.9", "9.6", "33.8", "58.6", "53", "30.4", "45.9", "-48.3", "9.9", "27.2", "-165.2", "-97.3", "-28.6", "33.9", "93.9", "-223.2", "-30", "151", "66.6", "35.3", "74.9", "165.9", "5.4"]
+    
+    
+    private let ionization: [String] = ["buh"]
+    
+    
+    private let amountlist: [String] = []
+    
     @State private var element: String = ""
     
     var body: some View {
         
         ZStack {
-            Text("Electron Configuration").font(.largeTitle).fontWeight(.bold).multilineTextAlignment(.leading).padding(.bottom, 725)
+            Text("Electron Trends").font(.largeTitle).fontWeight(.bold).multilineTextAlignment(.leading).padding(.bottom, 725)
             
             VStack {
                 Text("Type in element here:")
@@ -30,16 +39,31 @@ struct ElConfigSearchView: View {
                 TextField("Element (Ex. Mg)",text: $element)
                     .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/34.0/*@END_MENU_TOKEN@*/)
                 
-                Text("Electron Configuration:")
-                Text(elementlist[elementnamelist.firstIndex(of: element) ?? 11])
+                Spacer()
                 
-                Text("Electron Configuration /w Noble Gas Shorthand:")
-                    .padding(.top, 10.0)
-                Text(nobelshorthand[elementnamelist.firstIndex(of: element) ?? 11])
+                Group {
+                    Text("Electron Configuration:")
+                    Text(elementlist[elementnamelist.firstIndex(of: element) ?? 11])
+                        .padding(.bottom, 25.0)
+                }
+
+                
+                Group {
+                    Text("Electron Configuration /w Noble Gas Shorthand:")
+                    Text(nobelshorthand[elementnamelist.firstIndex(of: element) ?? 11])
+                        .padding(.bottom, 25.0)
+                }
                 
                 
-                Text("Electron Affinity:")
-                    .padding(.top, 10.0)
+                Group {
+                    Text("Electron Affinity (kJ/mol):")
+                    Text(affinitylist[elementnamelist.firstIndex(of: element) ?? 11])
+                        .padding(.bottom, 25.0)
+                }
+
+                
+                
+                Text("Ionization Energy:")
                 
                 
                 Spacer()
@@ -47,6 +71,7 @@ struct ElConfigSearchView: View {
             .padding(.top, 55.0).padding()
             
         }
+        .frame(width: 380.0)
         
         
     }

@@ -31,7 +31,7 @@ struct ExtraView: View {
                         }
                         
                         NavigationLink(destination: ElConfigSearchView()) {
-                            Text("Electron Configuration Searcher")
+                            Text("Electron Trends Searcher")
                         }
                         
                     }

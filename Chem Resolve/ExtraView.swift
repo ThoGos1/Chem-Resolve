@@ -34,8 +34,16 @@ struct ExtraView: View {
                             Text("Electron Trends Searcher")
                         }
                         
+                        NavigationLink(destination: ElConfigSearchView()) {
+                            Text("Atomic/Ionic Radii Graphic")
+                        }
+                        
+                        NavigationLink(destination: ElConfigSearchView()) {
+                            Text("Common Polyatomic Ions Nomeclature")
+                        }
+                        
                     }
-                    Text("Version: 1.0")
+                    Text("Version: bruh")
                 }
                 
                 Image("ChemLogo")
@@ -84,7 +92,7 @@ struct AboutView: View {
                 Spacer()
             }
             VStack {
-                Text("Thank you for using Chem Resolve, every download is appreciated greaty.\nChem Resolve is developed my me, Thomas.\nI'm a first-generation college student at UC San Diego.\nI made this app to help college students like myself, that would rather focus learning and analysis and less on busy work.\nIf you ever see an ad on this app it would be great if you interact with it, as I'm already broke, and hosting an app on the App Store isn't exactly cheap :)")
+                Text("Thank you for using Chem Resolve, every download is appreciated greaty.\nChem Resolve is developed my me, ThoGos.\nI'm a first-generation college student at UC San Diego.\nI made this app to help college students like myself, that would rather focus learning and analysis and less on busy work.\nIf you ever see an ad on this app it would be great if you interact with it, as I'm already broke, and hosting an app on the App Store isn't exactly cheap :)")
                     .padding(.horizontal, 20).lineSpacing(8)
                 Spacer()
             }

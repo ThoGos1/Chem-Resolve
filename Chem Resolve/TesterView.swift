@@ -27,6 +27,18 @@ struct TesterView: View {
                     x += 2
                 }
                 
+                // Sinus
+                Text(String(Double(floor(10000*sin(30.0 * Double.pi / 180))/10000)))
+                
+                // Cosinus
+                Text(String(Double(floor(10000*cos(30.0 * Double.pi / 180))/10000)))
+                
+                // Tangent
+                Text(String(Double(floor(10000*tan(30.0 * Double.pi / 180))/10000)))
+                
+                // Arctan
+                Text(String(Double(floor(10000*atan(0.57 * Double.pi / 180))/10000)))
+                
                 Spacer()
                 
                 Image("green").resizable().aspectRatio(contentMode: .fit).padding(.bottom, 35.0)

@@ -22,24 +22,36 @@ struct ExtraView: View {
                             Text("About Me")
                         }
                         
+                        NavigationLink(destination: ElConfigSearchView()) {
+                            Text("Electron Trends Searcher")
+                        }
+                        
+                        NavigationLink(destination: ElementInfoView()) {
+                            Text("Element Info Searcher")
+                        }
+                        
                         NavigationLink(destination: MiniPeriodView()) {
-                            Text("Minimalist Period Table Background")
+                            Text("Minimalist Periodic Table Background")
                         }
                         
                         NavigationLink(destination: OrbitalTableView()) {
                             Text("Single Electron Orbital Graph")
                         }
                         
-                        NavigationLink(destination: ElConfigSearchView()) {
-                            Text("Electron Trends Searcher")
+                        NavigationLink(destination: RadiiView()) {
+                            Text("Atomic Radii Graphic")
                         }
                         
-                        NavigationLink(destination: ElConfigSearchView()) {
-                            Text("Atomic/Ionic Radii Graphic")
+                        NavigationLink(destination: IonRadiiView()) {
+                            Text("Ionic Radii Graphic")
                         }
                         
-                        NavigationLink(destination: ElConfigSearchView()) {
-                            Text("Common Polyatomic Ions Nomeclature")
+                        NavigationLink(destination: CommonIonView()) {
+                            Text("Common Ions Nomeclature")
+                        }
+                        
+                        NavigationLink(destination: SolubilityView()) {
+                            Text("Solubility table")
                         }
                         
                     }
@@ -50,7 +62,7 @@ struct ExtraView: View {
                     .resizable(resizingMode: .stretch)
                     .aspectRatio(contentMode: .fit)
                     .scaleEffect(0.3)
-                    .offset(x: 0, y: 90)
+                    .offset(x: 0, y: 200)
             }
             .navigationTitle("Extra's")
         }
@@ -115,6 +127,54 @@ struct OrbitalTableView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             Image("orbitalgraph")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fill)
+                .offset(x: -9, y: 0)
+        }
+    }
+}
+
+
+struct RadiiView: View {
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            Image("atomradii")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fill)
+                .offset(x: -9, y: 0)
+        }
+    }
+}
+
+
+struct IonRadiiView: View {
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            Image("ionradii")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fill)
+                .offset(x: -9, y: 0)
+        }
+    }
+}
+
+
+struct CommonIonView: View {
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            Image("comion")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fill)
+                .offset(x: -9, y: 0)
+        }
+    }
+}
+
+
+struct SolubilityView: View {
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            Image("soluble")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
                 .offset(x: -9, y: 0)

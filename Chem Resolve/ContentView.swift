@@ -7,7 +7,7 @@
 
 // alt + i = |
 // shift + alt + 7 = \
-
+// ∗ for better multiply
 
 import SwiftUI
 

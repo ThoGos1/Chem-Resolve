@@ -20,7 +20,16 @@ struct NoteView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: MixtureView()) {
+                    HStack {
+                        Image(systemName: "hourglass.tophalf.filled")
+                            .frame(height: 40)
+                            .scaleEffect(1.1)
+                        Text("Mixtures and Solutions")
+                    }
+                }
+                
+                NavigationLink(destination: TheMoleView()) {
                     HStack {
                         Image(systemName: "circle.hexagongrid.circle")
                             .frame(height: 40)
@@ -29,7 +38,7 @@ struct NoteView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: NucleusView()) {
                     HStack {
                         Image(systemName: "atom")
                             .frame(height: 40)
@@ -38,7 +47,7 @@ struct NoteView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: ElectronView()) {
                     HStack {
                         Image(systemName: "minus.circle")
                             .frame(height: 40)
@@ -47,7 +56,7 @@ struct NoteView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: PeriodicTableView()) {
                     HStack {
                         Image(systemName: "tablecells")
                             .frame(height: 40)

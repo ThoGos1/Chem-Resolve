@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B02931A273CF89100D91B92 /* ElementInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029319273CF89100D91B92 /* ElementInfoView.swift */; };
+		8B02931C273DD33400D91B92 /* MixtureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02931B273DD33400D91B92 /* MixtureView.swift */; };
+		8B02931E273E4C7600D91B92 /* TheMoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02931D273E4C7600D91B92 /* TheMoleView.swift */; };
+		8B029320273F4B8D00D91B92 /* NucleusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02931F273F4B8D00D91B92 /* NucleusView.swift */; };
+		8B029324273F53E700D91B92 /* ElectronView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029323273F53E700D91B92 /* ElectronView.swift */; };
+		8B029326273F572000D91B92 /* PeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029325273F572000D91B92 /* PeriodicTableView.swift */; };
 		8B1B23F4272FA318002CC0AB /* MatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23F3272FA318002CC0AB /* MatterView.swift */; };
 		8B1B23F72733B6B5002CC0AB /* AdvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23F62733B6B5002CC0AB /* AdvView.swift */; };
 		8B1B23FC2734BB3A002CC0AB /* ElConfigSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */; };
@@ -21,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B029319273CF89100D91B92 /* ElementInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInfoView.swift; sourceTree = "<group>"; };
+		8B02931B273DD33400D91B92 /* MixtureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixtureView.swift; sourceTree = "<group>"; };
+		8B02931D273E4C7600D91B92 /* TheMoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMoleView.swift; sourceTree = "<group>"; };
+		8B02931F273F4B8D00D91B92 /* NucleusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NucleusView.swift; sourceTree = "<group>"; };
+		8B029323273F53E700D91B92 /* ElectronView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronView.swift; sourceTree = "<group>"; };
+		8B029325273F572000D91B92 /* PeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicTableView.swift; sourceTree = "<group>"; };
 		8B1B23F3272FA318002CC0AB /* MatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatterView.swift; sourceTree = "<group>"; };
 		8B1B23F62733B6B5002CC0AB /* AdvView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvView.swift; sourceTree = "<group>"; };
 		8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElConfigSearchView.swift; sourceTree = "<group>"; };
@@ -50,6 +62,11 @@
 			isa = PBXGroup;
 			children = (
 				8B1B23F3272FA318002CC0AB /* MatterView.swift */,
+				8B02931B273DD33400D91B92 /* MixtureView.swift */,
+				8B02931D273E4C7600D91B92 /* TheMoleView.swift */,
+				8B02931F273F4B8D00D91B92 /* NucleusView.swift */,
+				8B029323273F53E700D91B92 /* ElectronView.swift */,
+				8B029325273F572000D91B92 /* PeriodicTableView.swift */,
 			);
 			path = "Note View Files";
 			sourceTree = "<group>";
@@ -58,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */,
+				8B029319273CF89100D91B92 /* ElementInfoView.swift */,
 			);
 			path = "Extra View Files";
 			sourceTree = "<group>";
@@ -177,12 +195,18 @@
 				8BF5C56E272B6D18006CC018 /* TesterView.swift in Sources */,
 				8B1B23F4272FA318002CC0AB /* MatterView.swift in Sources */,
 				8BF5C574272C930D006CC018 /* ExtraView.swift in Sources */,
+				8B029320273F4B8D00D91B92 /* NucleusView.swift in Sources */,
 				8BF5C562272B6CB0006CC018 /* ContentView.swift in Sources */,
 				8B1B23FC2734BB3A002CC0AB /* ElConfigSearchView.swift in Sources */,
+				8B02931E273E4C7600D91B92 /* TheMoleView.swift in Sources */,
 				8BF5C570272B8119006CC018 /* NoteView.swift in Sources */,
 				8BF5C572272B8250006CC018 /* HomeView.swift in Sources */,
 				8B1B23F72733B6B5002CC0AB /* AdvView.swift in Sources */,
+				8B029324273F53E700D91B92 /* ElectronView.swift in Sources */,
+				8B02931C273DD33400D91B92 /* MixtureView.swift in Sources */,
 				8BF5C560272B6CB0006CC018 /* Chem_ResolveApp.swift in Sources */,
+				8B02931A273CF89100D91B92 /* ElementInfoView.swift in Sources */,
+				8B029326273F572000D91B92 /* PeriodicTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

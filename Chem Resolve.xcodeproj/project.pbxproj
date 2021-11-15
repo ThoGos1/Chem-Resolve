@@ -13,6 +13,19 @@
 		8B029320273F4B8D00D91B92 /* NucleusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02931F273F4B8D00D91B92 /* NucleusView.swift */; };
 		8B029324273F53E700D91B92 /* ElectronView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029323273F53E700D91B92 /* ElectronView.swift */; };
 		8B029326273F572000D91B92 /* PeriodicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029325273F572000D91B92 /* PeriodicTableView.swift */; };
+		8B029328273F7A2200D91B92 /* IonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029327273F7A2200D91B92 /* IonsView.swift */; };
+		8B02932A273F7D9F00D91B92 /* PrecipitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029329273F7D9F00D91B92 /* PrecipitationView.swift */; };
+		8B02932C273F81F700D91B92 /* CompoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02932B273F81F700D91B92 /* CompoundsView.swift */; };
+		8B02932E273F88AD00D91B92 /* ChemNomenclatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02932D273F88AD00D91B92 /* ChemNomenclatureView.swift */; };
+		8B029331273F8F1C00D91B92 /* ElectromagnetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029330273F8F1C00D91B92 /* ElectromagnetView.swift */; };
+		8B029333273F920000D91B92 /* SpectraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029332273F920000D91B92 /* SpectraView.swift */; };
+		8B029335273F9DF800D91B92 /* QTheoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029334273F9DF800D91B92 /* QTheoryView.swift */; };
+		8B029337273FA16D00D91B92 /* WaveParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029336273FA16D00D91B92 /* WaveParticleView.swift */; };
+		8B029339273FA7A000D91B92 /* WaveNNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029338273FA7A000D91B92 /* WaveNNodeView.swift */; };
+		8B02933B273FB09700D91B92 /* QuantaNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02933A273FB09700D91B92 /* QuantaNumView.swift */; };
+		8B02933D273FB5BA00D91B92 /* ElConfigNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02933C273FB5BA00D91B92 /* ElConfigNoteView.swift */; };
+		8B02933F273FBBDC00D91B92 /* PeriodicityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02933E273FBBDC00D91B92 /* PeriodicityView.swift */; };
+		8B029341273FBE5F00D91B92 /* IonNAffinityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029340273FBE5F00D91B92 /* IonNAffinityView.swift */; };
 		8B1B23F4272FA318002CC0AB /* MatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23F3272FA318002CC0AB /* MatterView.swift */; };
 		8B1B23F72733B6B5002CC0AB /* AdvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23F62733B6B5002CC0AB /* AdvView.swift */; };
 		8B1B23FC2734BB3A002CC0AB /* ElConfigSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */; };
@@ -33,6 +46,19 @@
 		8B02931F273F4B8D00D91B92 /* NucleusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NucleusView.swift; sourceTree = "<group>"; };
 		8B029323273F53E700D91B92 /* ElectronView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronView.swift; sourceTree = "<group>"; };
 		8B029325273F572000D91B92 /* PeriodicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicTableView.swift; sourceTree = "<group>"; };
+		8B029327273F7A2200D91B92 /* IonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IonsView.swift; sourceTree = "<group>"; };
+		8B029329273F7D9F00D91B92 /* PrecipitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecipitationView.swift; sourceTree = "<group>"; };
+		8B02932B273F81F700D91B92 /* CompoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundsView.swift; sourceTree = "<group>"; };
+		8B02932D273F88AD00D91B92 /* ChemNomenclatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemNomenclatureView.swift; sourceTree = "<group>"; };
+		8B029330273F8F1C00D91B92 /* ElectromagnetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectromagnetView.swift; sourceTree = "<group>"; };
+		8B029332273F920000D91B92 /* SpectraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectraView.swift; sourceTree = "<group>"; };
+		8B029334273F9DF800D91B92 /* QTheoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTheoryView.swift; sourceTree = "<group>"; };
+		8B029336273FA16D00D91B92 /* WaveParticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveParticleView.swift; sourceTree = "<group>"; };
+		8B029338273FA7A000D91B92 /* WaveNNodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveNNodeView.swift; sourceTree = "<group>"; };
+		8B02933A273FB09700D91B92 /* QuantaNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantaNumView.swift; sourceTree = "<group>"; };
+		8B02933C273FB5BA00D91B92 /* ElConfigNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElConfigNoteView.swift; sourceTree = "<group>"; };
+		8B02933E273FBBDC00D91B92 /* PeriodicityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicityView.swift; sourceTree = "<group>"; };
+		8B029340273FBE5F00D91B92 /* IonNAffinityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IonNAffinityView.swift; sourceTree = "<group>"; };
 		8B1B23F3272FA318002CC0AB /* MatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatterView.swift; sourceTree = "<group>"; };
 		8B1B23F62733B6B5002CC0AB /* AdvView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvView.swift; sourceTree = "<group>"; };
 		8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElConfigSearchView.swift; sourceTree = "<group>"; };
@@ -58,6 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B02932F273F8EE800D91B92 /* Adv View Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B029330273F8F1C00D91B92 /* ElectromagnetView.swift */,
+				8B029332273F920000D91B92 /* SpectraView.swift */,
+				8B029334273F9DF800D91B92 /* QTheoryView.swift */,
+				8B029336273FA16D00D91B92 /* WaveParticleView.swift */,
+				8B029338273FA7A000D91B92 /* WaveNNodeView.swift */,
+				8B02933A273FB09700D91B92 /* QuantaNumView.swift */,
+				8B02933C273FB5BA00D91B92 /* ElConfigNoteView.swift */,
+				8B02933E273FBBDC00D91B92 /* PeriodicityView.swift */,
+				8B029340273FBE5F00D91B92 /* IonNAffinityView.swift */,
+			);
+			path = "Adv View Files";
+			sourceTree = "<group>";
+		};
 		8B1B23F2272FA2F0002CC0AB /* Note View Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +109,10 @@
 				8B02931F273F4B8D00D91B92 /* NucleusView.swift */,
 				8B029323273F53E700D91B92 /* ElectronView.swift */,
 				8B029325273F572000D91B92 /* PeriodicTableView.swift */,
+				8B029327273F7A2200D91B92 /* IonsView.swift */,
+				8B029329273F7D9F00D91B92 /* PrecipitationView.swift */,
+				8B02932B273F81F700D91B92 /* CompoundsView.swift */,
+				8B02932D273F88AD00D91B92 /* ChemNomenclatureView.swift */,
 			);
 			path = "Note View Files";
 			sourceTree = "<group>";
@@ -99,6 +145,7 @@
 		8BF5C55E272B6CB0006CC018 /* Chem Resolve */ = {
 			isa = PBXGroup;
 			children = (
+				8B02932F273F8EE800D91B92 /* Adv View Files */,
 				8BF5C55F272B6CB0006CC018 /* Chem_ResolveApp.swift */,
 				8BF5C561272B6CB0006CC018 /* ContentView.swift */,
 				8B1B23F62733B6B5002CC0AB /* AdvView.swift */,
@@ -192,20 +239,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B029333273F920000D91B92 /* SpectraView.swift in Sources */,
+				8B029335273F9DF800D91B92 /* QTheoryView.swift in Sources */,
+				8B029341273FBE5F00D91B92 /* IonNAffinityView.swift in Sources */,
 				8BF5C56E272B6D18006CC018 /* TesterView.swift in Sources */,
+				8B02932E273F88AD00D91B92 /* ChemNomenclatureView.swift in Sources */,
+				8B02933F273FBBDC00D91B92 /* PeriodicityView.swift in Sources */,
 				8B1B23F4272FA318002CC0AB /* MatterView.swift in Sources */,
 				8BF5C574272C930D006CC018 /* ExtraView.swift in Sources */,
+				8B02932A273F7D9F00D91B92 /* PrecipitationView.swift in Sources */,
 				8B029320273F4B8D00D91B92 /* NucleusView.swift in Sources */,
+				8B029339273FA7A000D91B92 /* WaveNNodeView.swift in Sources */,
+				8B02932C273F81F700D91B92 /* CompoundsView.swift in Sources */,
+				8B029331273F8F1C00D91B92 /* ElectromagnetView.swift in Sources */,
 				8BF5C562272B6CB0006CC018 /* ContentView.swift in Sources */,
 				8B1B23FC2734BB3A002CC0AB /* ElConfigSearchView.swift in Sources */,
 				8B02931E273E4C7600D91B92 /* TheMoleView.swift in Sources */,
+				8B029337273FA16D00D91B92 /* WaveParticleView.swift in Sources */,
 				8BF5C570272B8119006CC018 /* NoteView.swift in Sources */,
 				8BF5C572272B8250006CC018 /* HomeView.swift in Sources */,
 				8B1B23F72733B6B5002CC0AB /* AdvView.swift in Sources */,
 				8B029324273F53E700D91B92 /* ElectronView.swift in Sources */,
 				8B02931C273DD33400D91B92 /* MixtureView.swift in Sources */,
 				8BF5C560272B6CB0006CC018 /* Chem_ResolveApp.swift in Sources */,
+				8B029328273F7A2200D91B92 /* IonsView.swift in Sources */,
 				8B02931A273CF89100D91B92 /* ElementInfoView.swift in Sources */,
+				8B02933D273FB5BA00D91B92 /* ElConfigNoteView.swift in Sources */,
+				8B02933B273FB09700D91B92 /* QuantaNumView.swift in Sources */,
 				8B029326273F572000D91B92 /* PeriodicTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

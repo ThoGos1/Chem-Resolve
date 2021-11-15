@@ -65,7 +65,7 @@ struct NoteView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: IonsView()) {
                     HStack {
                         Image(systemName: "plus.forwardslash.minus")
                             .frame(height: 40)
@@ -74,7 +74,7 @@ struct NoteView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: PrecipitationView()) {
                     HStack {
                         Image(systemName: "cloud.rain.fill")
                             .frame(height: 40)
@@ -83,7 +83,7 @@ struct NoteView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: CompoundsView()) {
                     HStack {
                         Image(systemName: "aqi.medium")
                             .frame(height: 40)
@@ -92,7 +92,7 @@ struct NoteView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: ChemNomenclatureView()) {
                     HStack {
                         Image(systemName: "textformat.abc")
                             .frame(height: 40)

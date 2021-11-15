@@ -55,15 +55,22 @@ struct ExtraView: View {
                         }
                         
                     }
+                    
+                    Image("ChemLogo")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200.0, height: 80.0)
+                    
                     Text("Version: bruh")
                 }
-                
-                Image("ChemLogo")
-                    .resizable(resizingMode: .stretch)
-                    .aspectRatio(contentMode: .fit)
-                    .scaleEffect(0.3)
-                    .offset(x: 0, y: 200)
             }
+            
+//            Image("ChemLogo")
+//                .resizable(resizingMode: .stretch)
+//                .aspectRatio(contentMode: .fit)
+//                .scaleEffect(0.3)
+//                .offset(x: 0, y: 200)
+            
             .navigationTitle("Extra's")
         }
     }
@@ -129,7 +136,7 @@ struct OrbitalTableView: View {
             Image("orbitalgraph")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
-                .offset(x: -9, y: 0)
+                .offset(x: -3, y: 0)
         }
     }
 }
@@ -192,7 +199,6 @@ struct ExtraView_Previews: PreviewProvider {
 //        AboutView()
         
 //        MiniPeriodView()
-        
 //        OrbitalTableView()
         
     }

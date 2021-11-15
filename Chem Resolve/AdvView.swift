@@ -11,7 +11,7 @@ struct AdvView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: ElectromagnetView()) {
                     HStack {
                         Image(systemName: "bolt.circle")
                             .frame(height: 40)
@@ -20,7 +20,7 @@ struct AdvView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: SpectraView()) {
                     HStack {
                         Image(systemName: "sunrise.fill")
                             .frame(height: 40)
@@ -29,16 +29,16 @@ struct AdvView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: QTheoryView()) {
                     HStack {
                         Image(systemName: "circle.grid.cross")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Quantum Chemistry")
+                        Text("Quantum Theory")
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: WaveParticleView()) {
                     HStack {
                         Image(systemName: "dot.radiowaves.right")
                             .frame(height: 40)
@@ -47,7 +47,7 @@ struct AdvView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: WaveNNodeView()) {
                     HStack {
                         Image(systemName: "waveform.and.magnifyingglass")
                             .frame(height: 40)
@@ -56,7 +56,7 @@ struct AdvView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: QuantaNumView()) {
                     HStack {
                         Image(systemName: "123.rectangle")
                             .frame(height: 40)
@@ -65,7 +65,7 @@ struct AdvView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: ElConfigNoteView()) {
                     HStack {
                         Image(systemName: "rectangle.and.pencil.and.ellipsis")
                             .frame(height: 40)
@@ -74,12 +74,21 @@ struct AdvView: View {
                     }
                 }
                 
-                NavigationLink(destination: TesterView()) {
+                NavigationLink(destination: PeriodicityView()) {
                     HStack {
                         Image(systemName: "lines.measurement.horizontal")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Atomic & Ionic Volume and Radii")
+                        Text("Periodicity")
+                    }
+                }
+                
+                NavigationLink(destination: IonNAffinityView()) {
+                    HStack {
+                        Image(systemName: "tray.and.arrow.up")
+                            .frame(height: 40)
+                            .scaleEffect(1.1)
+                        Text("Ionization and Electron Affinity")
                     }
                 }
                 

@@ -56,7 +56,7 @@ struct ExtraView: View {
                         
                     }
                     
-                    Image("ChemLogo")
+                    Image("Chem Logo nob")
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 200.0, height: 80.0)
@@ -192,7 +192,10 @@ struct SolubilityView: View {
 
 struct ExtraView_Previews: PreviewProvider {
     static var previews: some View {
-        ExtraView()
+        Group {
+            ExtraView()
+                .preferredColorScheme(.dark)
+        }
         
 //        ContactView()
         

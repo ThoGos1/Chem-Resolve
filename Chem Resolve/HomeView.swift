@@ -11,9 +11,9 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: ElectromagnetView()) {
+                NavigationLink(destination: CHCombustView()) {
                     HStack {
-                        Image(systemName: "bolt.circle")
+                        Image(systemName: "flame")
                             .frame(height: 40)
                             .scaleEffect(1.1)
                         Text("CxHy Combustion Analysis")
@@ -22,28 +22,28 @@ struct HomeView: View {
                 
                 NavigationLink(destination: SpectraView()) {
                     HStack {
-                        Image(systemName: "sunrise.fill")
+                        Image(systemName: "flame.circle")
                             .frame(height: 40)
                             .scaleEffect(1.1)
                         Text("CxHyOz Combustion Analysis")
                     }
                 }
                 
-                NavigationLink(destination: QTheoryView()) {
+                NavigationLink(destination: BondCharView()) {
                     HStack {
                         Image(systemName: "circle.grid.cross")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Quantum Theory")
+                        Text("Bond Characteristics of X and Y")
                     }
                 }
                 
-                NavigationLink(destination: WaveParticleView()) {
+                NavigationLink(destination: DilutionSolveView()) {
                     HStack {
                         Image(systemName: "dot.radiowaves.right")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Wave-Particle Duality")
+                        Text("Dilutions")
                     }
                 }
                 
@@ -52,7 +52,7 @@ struct HomeView: View {
                         Image(systemName: "waveform.and.magnifyingglass")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("The Wave-Function and Nodes")
+                        Text("Empirical Formula from percentage")
                     }
                 }
                 
@@ -61,7 +61,7 @@ struct HomeView: View {
                         Image(systemName: "123.rectangle")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Quantum Numbers")
+                        Text("Mole, Mass, & Volume Conversions")
                     }
                 }
                 
@@ -70,7 +70,7 @@ struct HomeView: View {
                         Image(systemName: "rectangle.and.pencil.and.ellipsis")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Electron Configuration")
+                        Text("Determine Element from Isotopes")
                     }
                 }
                 
@@ -93,7 +93,7 @@ struct HomeView: View {
                 }
                 
             }
-            .navigationTitle("Adv Chemistry Notes")
+            .navigationTitle("Chemistry Solver")
         }
     }
 }

@@ -29,6 +29,9 @@
 		8B1B23F4272FA318002CC0AB /* MatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23F3272FA318002CC0AB /* MatterView.swift */; };
 		8B1B23F72733B6B5002CC0AB /* AdvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23F62733B6B5002CC0AB /* AdvView.swift */; };
 		8B1B23FC2734BB3A002CC0AB /* ElConfigSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */; };
+		8BDDD214274C7BA0001ED29E /* BondCharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDD213274C7BA0001ED29E /* BondCharView.swift */; };
+		8BDDD216274D96CA001ED29E /* DilutionSolveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDD215274D96CA001ED29E /* DilutionSolveView.swift */; };
+		8BDDD21827670F99001ED29E /* CHCombustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDD21727670F99001ED29E /* CHCombustView.swift */; };
 		8BF5C560272B6CB0006CC018 /* Chem_ResolveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5C55F272B6CB0006CC018 /* Chem_ResolveApp.swift */; };
 		8BF5C562272B6CB0006CC018 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5C561272B6CB0006CC018 /* ContentView.swift */; };
 		8BF5C564272B6CB1006CC018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BF5C563272B6CB1006CC018 /* Assets.xcassets */; };
@@ -62,6 +65,9 @@
 		8B1B23F3272FA318002CC0AB /* MatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatterView.swift; sourceTree = "<group>"; };
 		8B1B23F62733B6B5002CC0AB /* AdvView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvView.swift; sourceTree = "<group>"; };
 		8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElConfigSearchView.swift; sourceTree = "<group>"; };
+		8BDDD213274C7BA0001ED29E /* BondCharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BondCharView.swift; sourceTree = "<group>"; };
+		8BDDD215274D96CA001ED29E /* DilutionSolveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DilutionSolveView.swift; sourceTree = "<group>"; };
+		8BDDD21727670F99001ED29E /* CHCombustView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHCombustView.swift; sourceTree = "<group>"; };
 		8BF5C55C272B6CB0006CC018 /* Chem Resolve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chem Resolve.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BF5C55F272B6CB0006CC018 /* Chem_ResolveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chem_ResolveApp.swift; sourceTree = "<group>"; };
 		8BF5C561272B6CB0006CC018 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +132,16 @@
 			path = "Extra View Files";
 			sourceTree = "<group>";
 		};
+		8BDDD212274C7B72001ED29E /* Solver View Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BDDD213274C7BA0001ED29E /* BondCharView.swift */,
+				8BDDD215274D96CA001ED29E /* DilutionSolveView.swift */,
+				8BDDD21727670F99001ED29E /* CHCombustView.swift */,
+			);
+			path = "Solver View Files";
+			sourceTree = "<group>";
+		};
 		8BF5C553272B6CB0006CC018 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +166,7 @@
 				8BF5C561272B6CB0006CC018 /* ContentView.swift */,
 				8B1B23F62733B6B5002CC0AB /* AdvView.swift */,
 				8BF5C571272B8250006CC018 /* HomeView.swift */,
+				8BDDD212274C7B72001ED29E /* Solver View Files */,
 				8BF5C56F272B8119006CC018 /* NoteView.swift */,
 				8B1B23F2272FA2F0002CC0AB /* Note View Files */,
 				8BF5C573272C930C006CC018 /* ExtraView.swift */,
@@ -255,8 +272,10 @@
 				8BF5C562272B6CB0006CC018 /* ContentView.swift in Sources */,
 				8B1B23FC2734BB3A002CC0AB /* ElConfigSearchView.swift in Sources */,
 				8B02931E273E4C7600D91B92 /* TheMoleView.swift in Sources */,
+				8BDDD216274D96CA001ED29E /* DilutionSolveView.swift in Sources */,
 				8B029337273FA16D00D91B92 /* WaveParticleView.swift in Sources */,
 				8BF5C570272B8119006CC018 /* NoteView.swift in Sources */,
+				8BDDD21827670F99001ED29E /* CHCombustView.swift in Sources */,
 				8BF5C572272B8250006CC018 /* HomeView.swift in Sources */,
 				8B1B23F72733B6B5002CC0AB /* AdvView.swift in Sources */,
 				8B029324273F53E700D91B92 /* ElectronView.swift in Sources */,
@@ -266,6 +285,7 @@
 				8B02931A273CF89100D91B92 /* ElementInfoView.swift in Sources */,
 				8B02933D273FB5BA00D91B92 /* ElConfigNoteView.swift in Sources */,
 				8B02933B273FB09700D91B92 /* QuantaNumView.swift in Sources */,
+				8BDDD214274C7BA0001ED29E /* BondCharView.swift in Sources */,
 				8B029326273F572000D91B92 /* PeriodicTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

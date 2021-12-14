@@ -81,11 +81,21 @@ struct ElementInfoView: View {
                 
                 
                 Group {
+                    Text("Mass in kg:")
+                        .fontWeight(.semibold)
+                    Text(getRealMass(Z: element, Zlist: elementnamelist, Nlist: weightlist, LNlist: longweightlist, LZlist: longelementnamelist))
+                        .padding(.bottom, 25.0)
+                }
+                
+                
+                Group {
                     Text("Electron Negativity:")
                         .fontWeight(.semibold)
                     Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: negativelist, LNlist: longnegativelist, LZlist: longelementnamelist))
                         .padding(.bottom, 25.0)
                 }
+                
+                
                 
                 Spacer()
             }
@@ -195,6 +205,12 @@ func getMetal(Z: String, Nlist: [String], LZlist: [String]) -> String {
 }
 
 
+func getRealMass(Z: String, Zlist: [String], Nlist: [String], LNlist: [String], LZlist: [String]) -> String {
+    
+    return String(((Double(getEinfo(Z: Z, Zlist: Zlist, Nlist: Nlist, LNlist: LNlist, LZlist: LZlist)) ?? 1)/6.022e26))
+    
+    
+}
 
 
 

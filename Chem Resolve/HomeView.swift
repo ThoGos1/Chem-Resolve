@@ -74,24 +74,6 @@ struct HomeView: View {
                     }
                 }
                 
-                NavigationLink(destination: PeriodicityView()) {
-                    HStack {
-                        Image(systemName: "lines.measurement.horizontal")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Periodicity")
-                    }
-                }
-                
-                NavigationLink(destination: IonNAffinityView()) {
-                    HStack {
-                        Image(systemName: "tray.and.arrow.up")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Ionization and Electron Affinity")
-                    }
-                }
-                
             }
             .navigationTitle("Chemistry Solver")
         }

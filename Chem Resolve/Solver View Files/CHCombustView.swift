@@ -14,7 +14,7 @@ struct CHCombustView: View {
     
     var body: some View {
         ZStack {
-            Text("CxHy Combusion Analysis:").font(.largeTitle).fontWeight(.bold).multilineTextAlignment(.center).padding(.bottom, 725)
+            Text("CxHy Combustion Analysis:").font(.largeTitle).fontWeight(.bold).multilineTextAlignment(.center).padding(.bottom, 725)
             
             VStack {
                 

@@ -34,7 +34,8 @@ struct TheMoleView: View {
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
                     Image("moleconv").padding(.top, -30.0).frame(width: 1.0).scaleEffect(0.6)
-                    Text("'n' = amount of stuff (moles)\n'M' = molar mass (g/mol)\n'm' = mass (g)")
+                    Image("concmass").padding(.top, -30.0).frame(width: 1.0).scaleEffect(0.6)
+                    Text("'n' = amount of stuff (moles)\n'M' = molar mass (g/mol)\n'm' = mass (g)\n'c' = concentration (mol/L)\n'V' = Volume (L)")
                         .padding(.bottom, 20.0)
                 }
                 

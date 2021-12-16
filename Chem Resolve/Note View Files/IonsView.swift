@@ -49,7 +49,7 @@ struct IonsView: View {
                     Text("Isoelectric:")
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
-                    Text("This means that an atom has the same amount of electrons as another, but it is usually used in the context of ions getting the same amount of electrons as a noble gas\nEx. Na = 1s1 2s2 2p6 3s1\nSo if it loses the 3s1 it will become Neon.")
+                    Text("An atom has the same amount of electrons as another, usually ions get the same as noble gases.\nEx. Na = 1s1 2s2 2p6 3s1\nSo if it loses the 3s1 it will become Neon.")
                         .padding(.bottom, 20.0)
                 }
                 

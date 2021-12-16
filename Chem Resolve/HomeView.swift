@@ -74,6 +74,15 @@ struct HomeView: View {
                     }
                 }
                 
+                NavigationLink(destination: ElConfigNoteView()) {
+                    HStack {
+                        Image(systemName: "personalhotspot")
+                            .frame(height: 40)
+                            .scaleEffect(1.1)
+                        Text("Lewis Structure and VSEPR Help")
+                    }
+                }
+                
             }
             .navigationTitle("Chemistry Solver")
         }

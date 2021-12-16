@@ -200,15 +200,12 @@ func getMolFor(wat: String, carb: String, wfor: String) -> String {
         horc = false
     }
     
-    
     if(floor(xbig) != xbig || floor(ysmall) != ysmall) {
         
         xbig = round(xbig*100) / 100.0
         ysmall = round(ysmall*100) / 100.0
         
     }
-    
-    
     
     if((Int(Double(xbig) * 10) - (Int(xbig) * 100)) == 25){
         factor = 4.0
@@ -237,8 +234,6 @@ func getMolFor(wat: String, carb: String, wfor: String) -> String {
     if((Int(Double(xbig) * 10) - (Int(xbig) * 10)) == 8){
         factor = 5.0
     }
-    
-    
     
     if(floor(xbig) != xbig || floor(ysmall) != ysmall) {
         xbig = xbig*factor

@@ -208,8 +208,6 @@ func getMetal(Z: String, Nlist: [String], LZlist: [String]) -> String {
 func getRealMass(Z: String, Zlist: [String], Nlist: [String], LNlist: [String], LZlist: [String]) -> String {
     
     return String(((Double(getEinfo(Z: Z, Zlist: Zlist, Nlist: Nlist, LNlist: LNlist, LZlist: LZlist)) ?? 1)/6.022e26))
-    
-    
 }
 
 

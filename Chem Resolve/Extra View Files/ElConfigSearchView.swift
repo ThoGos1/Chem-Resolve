@@ -51,89 +51,95 @@ struct ElConfigSearchView: View {
     
     var body: some View {
         
-        ZStack {
-            Text("Electron Trends").font(.largeTitle).fontWeight(.bold).padding(.bottom, 725)
-            
+        ScrollView {
             VStack {
                 
+                Text("Electron Trends").font(.title).fontWeight(.bold).padding(.top, -10.0)
                 
-                Group {
+                GroupBox {
                     Text("Type in element here:")
                         .fontWeight(.black)
-                        .padding(.top)
+                        
                     
                     TextField("Element (Ex. Mg)",text: $element)
                         .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
                         .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                }
-                
-                
-                Group {
-                    Text("Atomic Number (# Protons/Electrons):")
-                        .fontWeight(.semibold)
-                    Text(getAnum(Z: element, Zlist: elementnamelist, Llist: longelementnamelist))
-                        .padding(.bottom, 25.0)
-                }
-                
-                
-                Group {
-                    Text("Electron Configuration:")
-                        .fontWeight(.semibold)
-                    Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: elementlist, LNlist: longconfig, LZlist: longelementnamelist))
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom, 25.0)
-                        .frame(width: 360.0, height: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/)
-                }
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
 
-                
-                Group {
-                    Text("Shorthand Electron Configuration:")
-                        .fontWeight(.semibold)
-                        .multilineTextAlignment(.center)
-                    Text(getEinfo(Z:element, Zlist: elementnamelist, Nlist: nobleshorthand, LNlist: longnoblelist, LZlist: longelementnamelist))
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom, 25.0)
                 }
                 
                 
-                Group {
-                    Text("Electron Affinity (kJ/mol):")
-                        .fontWeight(.semibold)
-                    Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: affinitylist, LNlist: longaffinitylist, LZlist: longelementnamelist))
-                        .padding(.bottom, 25.0)
-                }
+                GroupBox {
+                    
+                    Group {
+                        Text("Atomic Number (# Protons/Electrons):")
+                            .fontWeight(.semibold)
+                        Text(getAnum(Z: element, Zlist: elementnamelist, Llist: longelementnamelist))
+                            .padding(.bottom, 25.0)
+                    }
+                    
+                    
+                    Group {
+                        Text("Electron Configuration:")
+                            .fontWeight(.semibold)
+                        Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: elementlist, LNlist: longconfig, LZlist: longelementnamelist))
+                            .multilineTextAlignment(.center)
+                            .padding(.bottom, 25.0)
+                            .frame(width: 300.0, height: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/)
+                    }
 
-                
-                Group {
-                    Text("Common Ion Formation Charges:")
-                        .fontWeight(.semibold)
-                    Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: ionformlist, LNlist: longionformlist, LZlist: longelementnamelist))
-                        .padding(.bottom, 25.0)
+                    
+                    Group {
+                        Text("Shorthand Electron Configuration:")
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                        Text(getEinfo(Z:element, Zlist: elementnamelist, Nlist: nobleshorthand, LNlist: longnoblelist, LZlist: longelementnamelist))
+                            .multilineTextAlignment(.center)
+                            .padding(.bottom, 25.0)
+                    }
+                    
+                    
+                    Group {
+                        Text("Electron Affinity (kJ/mol):")
+                            .fontWeight(.semibold)
+                        Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: affinitylist, LNlist: longaffinitylist, LZlist: longelementnamelist))
+                            .padding(.bottom, 25.0)
+                    }
+
+                    
+                    Group {
+                        Text("Common Ion Formation Charges:")
+                            .fontWeight(.semibold)
+                        Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: ionformlist, LNlist: longionformlist, LZlist: longelementnamelist))
+                            .padding(.bottom, 25.0)
+                    }
+                    
+                    
+                    Group {
+                        Text("First Ionization Energy (eV):")
+                            .fontWeight(.semibold)
+                        Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: ionizationlist, LNlist: longionizationlist, LZlist: longelementnamelist))
+                            .padding(.bottom, 25.0)
+                    }
+                    
+                    
+                    Group {
+                        Text("Electrons on Energy Levels:")
+                            .fontWeight(.semibold)
+                        Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: numelectronlist, LNlist: longnumelectronlist, LZlist: longelementnamelist))
+                            .padding(.bottom, 25.0)
+                    }
+                    
                 }
                 
-                
-                Group {
-                    Text("First Ionization Energy (eV):")
-                        .fontWeight(.semibold)
-                    Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: ionizationlist, LNlist: longionizationlist, LZlist: longelementnamelist))
-                        .padding(.bottom, 25.0)
-                }
-                
-                
-                Group {
-                    Text("Electrons on Energy Levels:")
-                        .fontWeight(.semibold)
-                    Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: numelectronlist, LNlist: longnumelectronlist, LZlist: longelementnamelist))
-                        .padding(.bottom, 25.0)
-                }
                 
                 Spacer()
                 
             }
-            .padding(.top, 55.0)
             
         }
+        .padding(.horizontal)
         
     }
 }
@@ -170,8 +176,6 @@ func getEinfo(Z: String, Zlist: [String], Nlist: [String], LNlist: [String], LZl
         return "0"
     }
 }
-
-
 
 
 

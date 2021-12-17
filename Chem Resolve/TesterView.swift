@@ -11,7 +11,8 @@ struct TesterView: View {
     
     @State var x = 0
     let home = "Hello"
-    
+    @State private var element: String = ""
+
     
     var body: some View {
         ZStack {
@@ -44,6 +45,19 @@ struct TesterView: View {
                 Image("green").resizable().aspectRatio(contentMode: .fit).padding(.bottom, 35.0)
             }
         
+            GroupBox {
+                Text("Type in element here:")
+                    .fontWeight(.black)
+                    .padding(.top)
+                
+                TextField("Element (Ex. Mg)",text: $element)
+                    .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                    .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+
+            }
+            
     }
     }
 }

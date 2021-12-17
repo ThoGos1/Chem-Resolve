@@ -9,53 +9,52 @@ import SwiftUI
 
 struct ElectromagnetView: View {
     var body: some View {
-        ZStack {
-            Text("Electromagnetism").font(.largeTitle).fontWeight(.bold).padding(.bottom, 725)
+        
+        ScrollView {
             VStack {
-
-                Group {
-                    Text("The electromagnetic field:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                
+                Text("Electromagnetism").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                
+                GroupBox(label : Text("The electromagnetic field:")
+                            .fontWeight(.bold)) {
                     Text("Particles are being moved very fast, either radio, x-rays, light waves, etc.\nAKA waves carrying energy.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Wavelength:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Wavelength:")
+                            .fontWeight(.bold)) {
                     Text("The peak to peak distance in nanometers.\nThe lower the wavelength the more energy, Ex. gamma-rays created the HULK.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Amplitude and Intensity:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                    Text("Amplitude is the height of the wave over the center line.\nIntensity of the wave is the ampliture squared, so higher amplitude is higher intensity.")
+                GroupBox(label : Text("Amplitude and Intensity:")
+                            .fontWeight(.bold)) {
+                    Text("Amplitude is the max height of the wave from the center line.\nIntensity of the wave is the ampliture squared, so higher amplitude is higher intensity.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Frequency:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Frequency:")
+                            .fontWeight(.bold)) {
                     Text("How many cycles in a second, AKA how long the wave is in Hz.\n- The higher Hz, the shorter wavelength\n- The lower Hz, the longer wavelength")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Commonly used numbers and equations:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Commonly used numbers and equations:")
+                            .fontWeight(.bold)) {
                     Text("Speed of Light: 2.998∗10^8 m/s\nSpeed of Sound: 343.06 m/s\nHow wavelengths and frequencies are connected:\nSpeed of light = Wavelength ∗ Frequency.")
+                        .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
                 Spacer()
             }
-            .padding(.top, 55.0).padding()
+            
         }
+        .padding(.horizontal)
         
     }
 }

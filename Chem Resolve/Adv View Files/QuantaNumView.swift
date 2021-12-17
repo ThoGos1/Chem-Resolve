@@ -9,54 +9,56 @@ import SwiftUI
 
 struct QuantaNumView: View {
     var body: some View {
-        ZStack {
-            Text("Quantum Numbers").font(.largeTitle).fontWeight(.bold).padding(.bottom, 725)
+        
+        ScrollView {
             VStack {
                 
-                Group {
-                    Text("Quantum Numbers:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                Text("Quantum Numbers:").font(.title).fontWeight(.bold).padding(.top, -10.0)
+
+                
+                GroupBox(label : Text("Quantum Numbers:")
+                            .fontWeight(.bold)) {
                     Text("There are 3 quantum numbers that determines the electron configuration of atoms.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Principal Quantum Number (n):")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Principal Quantum Number (n):")
+                            .fontWeight(.bold)) {
                     Text("The HIGHER the n-value the further away it is from the nucleus, until it's free at 'infinity'.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Orbital Angular Momentum Quantum Number:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Orbital Angular Momentum Quantum Number (l):")
+                            .fontWeight(.bold)) {
                     Text("The l-value is related to the shape of the orbital.\nl = 0, 1, 2, 3 … n-1")
                     Image("orbital")
-                        .padding(.top, -30.0).frame(width: 380.0, height: 150.0).scaleEffect(0.55)
+                        .scaleEffect(0.47)                        .frame(width: 320.0, height: 120.0)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 3))
                 }
                 
-                Group {
-                    Text("Magnetic Quantum Number (ml):")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                    Text("The description of the shape, like orientation.\nRange = -l to +l")
+                GroupBox(label : Text("Magnetic Quantum Number (ml):")
+                            .fontWeight(.bold)) {
+                    Text("The description of the shape, like its orientation and position.\nRange = -l to +l")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Electron Spin (ms):")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Electron Spin (ms):")
+                            .fontWeight(.bold)) {
                     Text("Two electrons can have the same n, l, ml, but different spins.\nEither 0.5 or -0.5")
+                        .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
                 Spacer()
             }
-            .padding(.top, 55.0).padding()
+            
         }
+        .padding(.horizontal)
         
     }
 }

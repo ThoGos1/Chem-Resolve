@@ -9,70 +9,65 @@ import SwiftUI
 
 struct NucleusView: View {
     var body: some View {
-        ZStack {
-            Text("The Atom and Nucleus").font(.largeTitle).fontWeight(.bold).padding(.bottom, 725)
+        
+        ScrollView {
+            
             VStack {
+                
+                Text("The Atom and Nucleus").font(.title).fontWeight(.bold).padding(.top, -10.0)
                 
                 Text("There are 88 naturally occuring elements, but 118 are present in the Periodic Table.")
                     .fontWeight(.medium)
                     .multilineTextAlignment(.center)
-                    .padding(.bottom, 20.0)
+                    .padding(.bottom, 15.0)
                     .padding(/*@START_MENU_TOKEN@*/.top, -10.0/*@END_MENU_TOKEN@*/)
                 
-                Group {
-                    Text("Element:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Element:")
+                            .fontWeight(.bold)) {
                     Text("A collection of only the same atom, like H2, O2, N2, F2, Cl2, Br2, and I2.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("The Nucleus:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                    Text("The center of the atom made up of Protons (+) and Neutrons (0).")
+                GroupBox(label : Text("The Nucleus:")
+                            .fontWeight(.bold)) {
+                    Text("The center of the atom made up of Protons (+) and Neutrons (0). This is what decides the mass of the atom.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Subatomic particles:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Subatomic particles:")
+                            .fontWeight(.bold)) {
                     Text("Particles that make up the atom, like the protons, neutrons, electrons, and quarks.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Atomic Number:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Atomic Number:")
+                            .fontWeight(.bold)) {
                     Text("Amount of protons in the atom, and usually the amount of electrons too, because '+' + '-' = 0.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Isotope:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Isotope:")
+                            .fontWeight(.bold)) {
                     Text("An Atom that has the same amount of protons, but different number of neutrons.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Atomic Mass:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Atomic Mass:")
+                            .fontWeight(.bold)) {
                     Text("The average of the mass of protons and neutrons from the atom, considering the percent abundance of the different isotopes.\nAvg Mass = (% ∗ mass1) + (% ∗ mass2)")
+                        .padding(.top, -5.0)
+                        .padding(.bottom, 20.0)
                 }
-                
-
-                
-                
                 Spacer()
             }
-            .padding(.top, 55.0).padding()
+            
         }
+        .padding(.horizontal)
         
     }
 }

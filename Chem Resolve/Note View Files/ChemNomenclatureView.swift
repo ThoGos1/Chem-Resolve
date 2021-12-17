@@ -9,33 +9,36 @@ import SwiftUI
 
 struct ChemNomenclatureView: View {
     var body: some View {
-        ZStack {
-            Text("Chemical Nomenclature").font(.largeTitle).fontWeight(.bold).padding(.bottom, 725)
+        
+        ScrollView {
             VStack {
-
-                Group {
-                    Text("Nomeclature for covalent compounds:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                
+                Text("Chemical Nomeclature").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                
+                GroupBox(label : Text("Nomeclature for covalent compounds:")
+                            .fontWeight(.bold)) {
                     Text("The non-metals are written in the following order:\nB     Si     C     As     P     N     H     Te     Se     S     O     At     I     Br     Cl     F\nThat's why water is H2O and not OH2.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Numeric Prefixes:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Numeric Prefixes:")
+                            .fontWeight(.bold)) {
                     Text("In covalent compounds if there are multiple atoms you need to add a prefix in the name of the compound.")
+                        .padding(.top, -5.0)
                     Image("prefix")
-                        .frame(width: 200.0, height: 390.0)
-                        .scaleEffect(0.7)
+                        .scaleEffect(0.74)                        .frame(width: 300.0, height: 405.0)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 3))
                 }
                 
                 
                 Spacer()
             }
-            .padding(.top, 55.0).padding()
+            
         }
+        .padding(.horizontal)
         
     }
 }

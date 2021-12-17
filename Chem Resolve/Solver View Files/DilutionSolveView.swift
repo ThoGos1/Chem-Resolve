@@ -16,64 +16,75 @@ struct DilutionSolveView: View {
     
     
     var body: some View {
-        ZStack {
-            Text("Bond Characteristics").font(.largeTitle).fontWeight(.bold).padding(.bottom, 725)
+        
+        ScrollView {
             
             VStack {
+                
+                Text("Bond Characteristics").font(.title).fontWeight(.bold).padding(.top, -10.0)
+
                 
                 Text("Enter the varibles that you know:")
                     .fontWeight(.black)
                     .padding(.vertical)
                 
-                
-                Group {
-                    Text("Enter Concentration 1 (mol/L) (if known):")
-                        .fontWeight(.semibold)
-                    
-                    TextField("Concentration (Ex. 5)",text: $c1)
-                        .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                }
-                
-                
-                Group {
-                    Text("Enter Concentration 2 (mol/L) (if known):")
-                        .fontWeight(.semibold)
-                    
-                    TextField("Concentration (Ex. 3)",text: $c2)
-                        .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                }
-                
-                
-                Group {
-                    Text("Enter Volume 1 (L) (if known):")
-                        .fontWeight(.semibold)
-                    
-                    TextField("Volume (Ex. 0.05)",text: $v1)
-                        .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                }
-                
-                Group {
-                    Text("Enter Volume 2 (L) (if known):")
-                        .fontWeight(.semibold)
-                    
-                    TextField("Volume (Ex. 0.3)",text: $v2)
-                        .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                }
-                
-                
-                Group {
-                    Text(varmiss(con1: c1, con2: c2, vol1: v1, vol2: v2))
-                        .fontWeight(.semibold)
-                    Text(getDilVar(con1: c1, con2: c2, vol1:v1, vol2: v2))
+                GroupBox {
+                    Group {
+                        Text("Enter Concentration 1 (mol/L) (if known):")
+                            .fontWeight(.semibold)
+                        
+                        TextField("Concentration (Ex. 5)",text: $c1)
+                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
 
+                    }
+                    
+                    
+                    Group {
+                        Text("Enter Concentration 2 (mol/L) (if known):")
+                            .fontWeight(.semibold)
+                        
+                        TextField("Concentration (Ex. 3)",text: $c2)
+                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                    }
+                    
+                    
+                    Group {
+                        Text("Enter Volume 1 (L) (if known):")
+                            .fontWeight(.semibold)
+                        
+                        TextField("Volume (Ex. 0.05)",text: $v1)
+                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                    }
+                    
+                    Group {
+                        Text("Enter Volume 2 (L) (if known):")
+                            .fontWeight(.semibold)
+                        
+                        TextField("Volume (Ex. 0.3)",text: $v2)
+                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                    }
+                    
+                    Group {
+                        Text(varmiss(con1: c1, con2: c2, vol1: v1, vol2: v2))
+                            .fontWeight(.semibold)
+                        Text(getDilVar(con1: c1, con2: c2, vol1:v1, vol2: v2))
+                    }
+                    
                 }
                 
                 
@@ -81,11 +92,9 @@ struct DilutionSolveView: View {
                 Spacer()
                 
             }
-            .padding(.top, 55.0)
-            
             
         }
-        
+        .padding(.horizontal)
     }
 }
 

@@ -31,98 +31,121 @@ struct IsoToElView: View {
     @State private var goramu: Bool = false
     
     var body: some View {
-        ZStack {
-            Text("Element from Isotopes").font(.largeTitle).fontWeight(.bold).padding(.bottom, 725)
+        
+        ScrollView {
             
             VStack {
                 
-                Text("Enter the varibles that you know:")
-                    .fontWeight(.black)
-                    .padding(.vertical)
-                    .padding(/*@START_MENU_TOKEN@*/.bottom, -17.0/*@END_MENU_TOKEN@*/)
+                Text("Isotope to Formula").font(.title).fontWeight(.bold).padding(.top, -10.0)
+
                 
-                Group {
-                    Text("Mass in grams or amu's:")
-                        .fontWeight(.semibold)
-                        .padding(.bottom, -5.0)
-                    Toggle(isOn: $goramu) {
-                        Text(getWhich(one: goramu))
+                GroupBox {
+                    
+                    Text("Enter the varibles that you know:")
+                        .fontWeight(.black)
+                        .padding(.bottom, 5.0)
+                    
+                    Group {
+                        Text("Mass in grams or amu's:")
+                            .fontWeight(.semibold)
+                            .padding(.bottom, -5.0)
+                        Toggle(isOn: $goramu) {
+                            Text(getWhich(one: goramu))
+                        }
+                        .padding(/*@START_MENU_TOKEN@*/.horizontal, 50.0/*@END_MENU_TOKEN@*/)
+                        .frame(width: 315.0, height: 50.0)
                     }
-                    .padding(/*@START_MENU_TOKEN@*/.horizontal, 100.0/*@END_MENU_TOKEN@*/)
-                    .frame(height: 50.0)
+                    
                 }
                 
-                Group {
-                    Text("Enter Isotope Weight and Percentage 1:")
-                        .fontWeight(.semibold)
-                        .padding(.bottom, -14.0)
+                
+                GroupBox {
                     
-                    TextField(getWText(one: goramu),text: $iso1)
-                        .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                    Group {
+                        Text("Enter Isotope Weight and Percentage 1:")
+                            .fontWeight(.semibold)
+                            .padding(.bottom, -14.0)
+                        
+                        TextField(getWText(one: goramu),text: $iso1)
+                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                        
+                        Spacer()
+                            .frame(width: 40.0, height: -40.0)
+                        
+                        TextField("Isotope Percentage (Ex. 78)",text: $isop1)
+                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                    }
                     
-                    Spacer()
-                        .frame(width: 40.0, height: -40.0)
+                    Group {
+                        Text("Enter Isotope Weight and Percentage 2:")
+                            .fontWeight(.semibold)
+                            .padding(.bottom, -14.0)
+                        
+                        TextField(getWText(one: goramu),text: $iso2)
+                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                        
+                        Spacer()
+                            .frame(width: 40.0, height: -40.0)
+                        
+                        TextField("Isotope Percentage (Ex. 10)",text: $isop2)
+                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                    }
                     
-                    TextField("Isotope Percentage (Ex. 78)",text: $isop1)
-                        .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                    Group {
+                        Text("Enter Isotope Weight and Percentage 3:")
+                            .fontWeight(.semibold)
+                            .padding(.bottom, -14.0)
+                        
+                        TextField(getWText(one: goramu),text: $iso3)
+                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                        
+                        Spacer()
+                            .frame(width: 40.0, height: -40.0)
+                        
+                        TextField("Isotope Percentage (Ex. 12)",text: $isop3)
+                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                    }
+                    
+                    Group {
+                        Text("Element Determined from Isotopes:")
+                            .fontWeight(.semibold)
+                        
+                        Text(getFromIsotope(i1:iso1, i1p:isop1, i2: iso2, i2p:isop2, i3:iso3, i3p: isop3, ga: goramu))
+                    }
+                    
                 }
                 
-                Group {
-                    Text("Enter Isotope Weight and Percentage 2:")
-                        .fontWeight(.semibold)
-                        .padding(.bottom, -14.0)
-                    
-                    TextField(getWText(one: goramu),text: $iso2)
-                        .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                    
-                    Spacer()
-                        .frame(width: 40.0, height: -40.0)
-                    
-                    TextField("Isotope Percentage (Ex. 10)",text: $isop2)
-                        .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                }
-                
-                Group {
-                    Text("Enter Isotope Weight and Percentage 3:")
-                        .fontWeight(.semibold)
-                        .padding(.bottom, -14.0)
-                    
-                    TextField(getWText(one: goramu),text: $iso3)
-                        .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                    
-                    Spacer()
-                        .frame(width: 40.0, height: -40.0)
-                    
-                    TextField("Isotope Percentage (Ex. 12)",text: $isop3)
-                        .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                }
-                
-                Group {
-                    Text("Element Determined from Isotopes:")
-                        .fontWeight(.semibold)
-                    
-                    Text(getFromIsotope(i1:iso1, i1p:isop1, i2: iso2, i2p:isop2, i3:iso3, i3p: isop3, ga: goramu))
-                }
                 
                 Spacer()
                 
             }
-            .padding(.top, 55.0)
-            
             
         }
+        .padding(.horizontal)
         
     }
 }
@@ -137,6 +160,7 @@ func getWhich(one: Bool) -> String {
     }
 }
 
+
 func getWText(one: Bool) -> String {
     if(one) {
         return "Isotope Mass (Ex. 4.1e-23)"
@@ -145,6 +169,7 @@ func getWText(one: Bool) -> String {
         return "Isotope Mass (Ex. 15)"
     }
 }
+
 
 func getFromIsotope(i1: String, i1p: String, i2: String, i2p: String, i3: String, i3p: String, ga: Bool) -> String {
     
@@ -157,6 +182,7 @@ func getFromIsotope(i1: String, i1p: String, i2: String, i2p: String, i3: String
     if(i1 == "" || i1p == "" || i2 == "" || i2p == "" || i3 == "" || i3p == ""){
         return "None"
     }
+    
     
     if(ga) {
         

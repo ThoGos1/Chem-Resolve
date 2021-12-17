@@ -12,6 +12,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        UITabBar.appearance().barTintColor = .systemBackground
+    }
+    
     var body: some View {
         TabView {
             
@@ -41,6 +46,23 @@ struct ContentView: View {
         }
     }
 }
+
+
+
+struct HiddenNavigationBar: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarHidden(true)
+    }
+}
+
+extension View {
+    func hiddenNavigationBarStyle() -> some View {
+        modifier( HiddenNavigationBar() )
+    }
+}
+
 
 
 

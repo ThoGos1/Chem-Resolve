@@ -30,77 +30,87 @@ struct ElementInfoView: View {
     
     var body: some View {
         
-        ZStack {
-            Text("Element Info").font(.largeTitle).fontWeight(.bold).padding(.bottom, 725)
-            
+        ScrollView {
             VStack {
                 
+                Text("Element Info").font(.title).fontWeight(.bold).padding(.top, -10.0)
+
                 
-                Group {
+                GroupBox {
                     Text("Type in element here:")
                         .fontWeight(.black)
-                        .padding(.top)
                     
                     TextField("Element (Ex. Mg)",text: $element)
                         .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
                         .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+
                 }
                 
                 
-                Group {
-                    Text("Atomic Number (# Protons/Electrons):")
-                        .fontWeight(.semibold)
-                    Text(getAnum(Z: element, Zlist: elementnamelist, Llist: longelementnamelist))
-                        .padding(.bottom, 25.0)
+                
+                GroupBox {
+                    
+                    Group {
+                        Text("Atomic Number (# Protons/Electrons):")
+                            .fontWeight(.semibold)
+                        Text(getAnum(Z: element, Zlist: elementnamelist, Llist: longelementnamelist))
+                            .padding(.bottom, 25.0)
+                    }
+                    
+                    
+                    Group {
+                        Text("Chemical Element Series:")
+                            .fontWeight(.semibold)
+                        Text(elseries(Z: element, Nlist: elementnamelist, LZlist: longelementnamelist))
+                            .padding(.bottom, 25.0)
+                    }
+                    
+                    
+                    Group {
+                        Text("Metal Status:")
+                            .fontWeight(.semibold)
+                        Text(getMetal(Z: element, Nlist: elementnamelist, LZlist: longelementnamelist))
+                            .padding(.bottom, 25.0)
+                    }
+                    
+                    
+                    Group {
+                        Text("Atomic Weight:")
+                            .fontWeight(.semibold)
+                        Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: weightlist, LNlist: longweightlist, LZlist: longelementnamelist))
+                            .padding(.bottom, 25.0)
+                    }
+                    
+                    
+                    Group {
+                        Text("Mass in kg:")
+                            .fontWeight(.semibold)
+                        Text(getRealMass(Z: element, Zlist: elementnamelist, Nlist: weightlist, LNlist: longweightlist, LZlist: longelementnamelist))
+                            .padding(.bottom, 25.0)
+                    }
+                    
+                    
+                    Group {
+                        Text("Electron Negativity:")
+                            .fontWeight(.semibold)
+                        Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: negativelist, LNlist: longnegativelist, LZlist: longelementnamelist))
+                            .padding(.bottom, 25.0)
+                    }
+                    
                 }
                 
-                
-                Group {
-                    Text("Chemical Element Series:")
-                        .fontWeight(.semibold)
-                    Text(elseries(Z: element, Nlist: elementnamelist, LZlist: longelementnamelist))
-                        .padding(.bottom, 25.0)
-                }
-                
-                
-                Group {
-                    Text("Metal Status:")
-                        .fontWeight(.semibold)
-                    Text(getMetal(Z: element, Nlist: elementnamelist, LZlist: longelementnamelist))
-                        .padding(.bottom, 25.0)
-                }
-                
-                
-                Group {
-                    Text("Atomic Weight:")
-                        .fontWeight(.semibold)
-                    Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: weightlist, LNlist: longweightlist, LZlist: longelementnamelist))
-                        .padding(.bottom, 25.0)
-                }
-                
-                
-                Group {
-                    Text("Mass in kg:")
-                        .fontWeight(.semibold)
-                    Text(getRealMass(Z: element, Zlist: elementnamelist, Nlist: weightlist, LNlist: longweightlist, LZlist: longelementnamelist))
-                        .padding(.bottom, 25.0)
-                }
-                
-                
-                Group {
-                    Text("Electron Negativity:")
-                        .fontWeight(.semibold)
-                    Text(getEinfo(Z: element, Zlist: elementnamelist, Nlist: negativelist, LNlist: longnegativelist, LZlist: longelementnamelist))
-                        .padding(.bottom, 25.0)
-                }
                 
                 
                 
                 Spacer()
             }
-            .padding(.top, 55.0)
+            
+            
         }
+        .padding(.horizontal)
+        
     }
 }
 

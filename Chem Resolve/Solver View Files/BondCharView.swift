@@ -21,42 +21,49 @@ struct BondCharView: View {
     @State private var second: String = ""
     
     var body: some View {
-        ZStack {
-            Text("Bond Characteristics").font(.largeTitle).fontWeight(.bold).padding(.bottom, 725)
-            
+        
+        ScrollView {
             VStack {
                 
-                Group {
+                Text("Bond Characteristics").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                
+                GroupBox {
                     Text("Enter bond here in X-Y format:")
                         .fontWeight(.black)
-                        .padding(.top)
                     
                     TextField("Element (Ex. Na-Cl)",text: $element)
                         .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
                         .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
                 
                 
-                Group {
-                    Text("Electronegativity Difference and Polarity:")
-                        .fontWeight(.semibold)
-                    Text(getDiff(el:element, Zlist: elementnamelist, Nlist: negativelist))
-                        .padding(.bottom, 25.0)
-                }
-                
-                Group {
-                    Text("Longer or Shorter than:")
-                        .fontWeight(.semibold)
-                        .padding(.bottom, -15.0)
+                GroupBox {
                     
-                    TextField("Element (Ex. K-I)",text: $second)
-                        .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                    Group {
+                        Text("Electronegativity Polarity:")
+                            .fontWeight(.semibold)
+                        Text(getDiff(el:element, Zlist: elementnamelist, Nlist: negativelist))
+                            .padding(.bottom, 25.0)
+                    }
                     
-                    Text(longshort(el: element, el2: second, Zlist: elementnamelist, Nlist: radiilist))
-                        .padding(.top, -10.0)
+                    Group {
+                        Text("Longer or Shorter than:")
+                            .fontWeight(.semibold)
+                            .padding(.bottom, -15.0)
+                        
+                        TextField("Element (Ex. K-I)",text: $second)
+                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                        
+                        Text(longshort(el: element, el2: second, Zlist: elementnamelist, Nlist: radiilist))
+                            .padding(.top, -10.0)
+                    }
+                    
                 }
                 
                 Spacer()
@@ -64,10 +71,10 @@ struct BondCharView: View {
                 
                 
             }
-            .padding(.top, 55.0)
             
             
         }
+        .padding(.horizontal)
         
     }
 }

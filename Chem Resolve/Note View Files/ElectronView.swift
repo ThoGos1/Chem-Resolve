@@ -9,49 +9,48 @@ import SwiftUI
 
 struct ElectronView: View {
     var body: some View {
-        ZStack {
-            Text("The Electron").font(.largeTitle).fontWeight(.bold).padding(.bottom, 725)
+        
+        ScrollView {
             VStack {
-
-                Group {
-                    Text("Electron:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                
+                Text("The Electron").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                
+                GroupBox(label : Text("Electron:")
+                            .fontWeight(.bold)) {
                     Text("The negative subatomic particle orbiting the nucleus giving the atom volume, and is responsible for how the atom interacts chemically.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Fundamental Charge:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                    Text("Amount of energy/Coulomb in one Electron:\ne = 1.602∗10^(−19) C\nModern value (charge/mass):\n9.109∗10^(−31) kg")
+                GroupBox(label : Text("Fundamental Charge:")
+                            .fontWeight(.bold)) {
+                    Text("Amount of energy in one Electron, either in Coulomb or kilograms:\ne = 1.602∗10^(−19) C\nModern value (charge/mass):\n9.109∗10^(−31) kg")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Text("The MORE energy the electron has, the farther away from the nucleus it is.")
+                Text("The MORE energy the electron has, the further away from the nucleus it is.")
                     .multilineTextAlignment(.center)
-                    .padding(.bottom, 20.0)
+                    .padding(.vertical, 10.0)
                 
-                Group {
-                    Text("Valence Electrons:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Valence Electrons:")
+                            .fontWeight(.bold)) {
                     Text("The outer most electrons.\nThese are the electrons that decide how the atom bonds with other atoms.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Core Electrons:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Core Electrons:")
+                        .fontWeight(.bold)) {
                     Text("The inner most electrons.\nCan also be seen as the noble gas that has the same electron configuration.")
+                        .padding(.top, -5.0)
+                        .padding(.bottom, 20.0)
                 }
                 
                 Spacer()
             }
-            .padding(.top, 55.0).padding()
         }
+        .padding(.horizontal)
         
     }
 }

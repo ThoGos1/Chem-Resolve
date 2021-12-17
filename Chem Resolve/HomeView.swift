@@ -34,7 +34,7 @@ struct HomeView: View {
                         Image(systemName: "circle.grid.cross")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Bond Characteristics of X and Y")
+                        Text("Bond Characteristics of Xy-Z")
                     }
                 }
                 

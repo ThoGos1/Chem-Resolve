@@ -9,63 +9,60 @@ import SwiftUI
 
 struct MixtureView: View {
     var body: some View {
-        ZStack {
-            Text("Mixtures and Solutions").font(.largeTitle).fontWeight(.bold).padding(.bottom, 725)
+        
+        ScrollView {
             VStack {
                 
-                Group {
-                    Text("Mixture:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                Text("Mixtures and Solutions").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                
+                GroupBox(label : Text("Mixture:")
+                            .fontWeight(.bold)) {
                     Text("A mix of two substances like salt and water, or the air in the atmosphere\nA mixture is a PHYSICAL change, and can be undone physically.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Heterogeneous Mixture:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Heterogeneous Mixture:")
+                        .fontWeight(.bold)) {
                     Text("Two different substances combined, like salt & water. The components are big enough to separate them.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Homogeneous Mixtures AKA Solutions:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                    Text("One or more substances dissolved together into one mixture.\nGaseous mixtures DON'T really count here\nThe molecules are so well mixed that you can't see separate components, AKA Uniform")
+                GroupBox(label : Text("Homogeneous Mixtures AKA Solutions:")
+                            .fontWeight(.bold)) {
+                    Text("One or more substances dissolved together into one mixture.\nGaseous mixtures DON'T really count here\nThe molecules are so well mixed that you can't see separate components, AKA Uniform.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Solvent:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                    Text("Dominant substance that the solutes mix with")
+                GroupBox(label : Text("Solvent:")
+                            .fontWeight(.bold)) {
+                    Text("The dominant substance that the solutes mix with. So it's what you add something to, like salt to water to make a solution.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Solute:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                    Text("The stuff added that then mix with the solvent")
+                GroupBox(label : Text("Solute:")
+                            .fontWeight(.bold)) {
+                    Text("The stuff added that then mix with the solvent. So it's what you add to something like water to make a solution.")
                         .padding(.bottom, 20.0)
+                        .padding(.top, -5.0)
                 }
                 
-                Group {
-                    Text("Crystallization:")
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
+                GroupBox(label : Text("Crystallization:")
+                            .fontWeight(.bold)) {
                     Text("When the solute comes out of the solvent as crystals, like salt in water, after evaporation.")
+                        .padding(.top, -5.0)
+                        .padding(.bottom, 20.0)
                 }
                 
                 
                 Spacer()
             }
-            .padding(.top, 55.0).padding()
+            
         }
-        
+        .padding(.horizontal)
     }
 }
 

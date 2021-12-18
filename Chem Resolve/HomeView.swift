@@ -34,7 +34,7 @@ struct HomeView: View {
                         Image(systemName: "circle.grid.cross")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Bond Characteristics of Xy-Z")
+                        Text("Bond Characteristics of X-Y")
                     }
                 }
                 
@@ -43,7 +43,7 @@ struct HomeView: View {
                         Image(systemName: "dot.radiowaves.right")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Dilutions")
+                        Text("Dilution Calculator")
                     }
                 }
                 
@@ -52,7 +52,7 @@ struct HomeView: View {
                         Image(systemName: "waveform.and.magnifyingglass")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Empirical Formula from percentage")
+                        Text("Empirical Formula & Percentage")
                     }
                 }
                 
@@ -61,11 +61,11 @@ struct HomeView: View {
                         Image(systemName: "123.rectangle")
                             .frame(height: 40)
                             .scaleEffect(1.1)
-                        Text("Mole, Mass, & Volume Conversions")
+                        Text("Mole and Mass Conversions")
                     }
                 }
                 
-                NavigationLink(destination: ElConfigNoteView()) {
+                NavigationLink(destination: IsoToElView()) {
                     HStack {
                         Image(systemName: "rectangle.and.pencil.and.ellipsis")
                             .frame(height: 40)

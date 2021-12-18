@@ -14,12 +14,8 @@ struct ExtraView: View {
                 VStack {
                     List {
                         
-                        NavigationLink(destination: ContactView()) {
-                            Text("Contact Me / Feedback")
-                        }
-                        
                         NavigationLink(destination: AboutView()) {
-                            Text("About Me")
+                            Text("About Me and Contact")
                         }
                         
                         NavigationLink(destination: ElConfigSearchView()) {
@@ -54,6 +50,10 @@ struct ExtraView: View {
                             Text("Solubility table")
                         }
                         
+                        NavigationLink(destination: LewisView()) {
+                            Text("Lewis Structure and VSERP Table")
+                        }
+                        
                     }
                     
                     Image("Chem Logo nob")
@@ -76,30 +76,6 @@ struct ExtraView: View {
     }
 }
 
-
-
-struct ContactView: View {
-    var body: some View {
-        ZStack {
-            VStack {
-                Text("Contact Me")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    
-                Spacer()
-            }
-            VStack {
-                Text("Thank you for using Chem Resolve, every download is appreciated greaty.\nChem Resolve is always trying to improve, and it was made to help students like myself.\nSo I ask of you to feel free to contact me with suggestions of new additions, like new solvers.\n\nMy Email address is: javalite@javalite.com")
-                    .padding(.horizontal, 20).lineSpacing(8)
-                Spacer()
-            }
-            .padding(.top, 55.0)
-        }
-    }
-}
-
-
-
 struct AboutView: View {
     var body: some View {
         ZStack {
@@ -111,8 +87,12 @@ struct AboutView: View {
                 Spacer()
             }
             VStack {
-                Text("Thank you for using Chem Resolve, every download is appreciated greaty.\nChem Resolve is developed my me, ThoGos.\nI'm a first-generation college student at UC San Diego.\nI made this app to help college students like myself, that would rather focus learning and analysis and less on busy work.\nIf you ever see an ad on this app it would be great if you interact with it, as I'm already broke, and hosting an app on the App Store isn't exactly cheap :)")
+                Text("Thank you for using Chem Resolve, every download is appreciated greatly.\nChem Resolve is developed my me, ThoGos.\nI'm a first-generation college student at UC San Diego.\nI made this app to help college students like myself, that would rather focus learning and analysis and less on busy work.")
+                    .padding(.horizontal, 20).lineSpacing(8).padding(.bottom, 15.0)
+                
+                Text("Chem Resolve is always trying to improve, and it was made to help students like myself.\nSo feel free to contact me with suggestions of new additions, like new solvers.\n\nMy Email address is: javalite@javalite.com")
                     .padding(.horizontal, 20).lineSpacing(8)
+                
                 Spacer()
             }
             .padding(.top, 55.0)
@@ -190,6 +170,18 @@ struct SolubilityView: View {
 }
 
 
+struct LewisView: View {
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            Image("lewis")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fill)
+                .offset(x: -3, y: 0)
+        }
+    }
+}
+
+
 struct ExtraView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -197,12 +189,6 @@ struct ExtraView_Previews: PreviewProvider {
                 
         }
         
-//        ContactView()
-        
-//        AboutView()
-        
-//        MiniPeriodView()
-//        OrbitalTableView()
         
     }
 }

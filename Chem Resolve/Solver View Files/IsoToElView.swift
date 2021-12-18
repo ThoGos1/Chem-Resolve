@@ -14,7 +14,7 @@ struct IsoToElView: View {
 
     private let longelementnamelist: [String] = ["Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"]
     
-    private let weightlist: [String] = ["0" ,"1.007", "4.002", "6.941", "9.012", "10.811", "12.011", "14.007", "15.999", "18.998", "20.18", "22.99", "24.305", "26.982", "28.086", "30.974", "32.065", "35.453", "39.948", "39.098", "40.078", "44.956", "47.867", "50.942", "51.996", "54.938", "55.845", "58.933", "58.693", "63.546", "65.38", "69.723", "72.64", "74.922", "78.96", "79.904", "83.798", "85.468", "87.62", "88.906", "91.224", "92.906", "95.96", "98", "101.07", "102.906", "106.42", "107.868", "112.411", "114.818", "118.71", "121.76", "127.6", "126.904", "131.293", "132.905", "137.327", "138.905", "140.116", "140.9082", "144.242", "145", "150.36", "151.964", "157.25", "158.925", "162.5", "164.93", "167.259", "168.934", "173.054", "174.967", "178.49", "180.948", "183.84", "186.207", "190.23", "192.217", "195.084", "196.967", "200.59", "204.383", "207.2", "208.98", "210", "210", "222", "223", "226", "227", "232.038", "231.036", "238.029", "237", "244", "243", "247", "247", "251", "252", "257", "258", "259", "262"]
+    private let weightlist: [String] = ["0" ,"1", "4", "7", "9", "11", "12", "14", "16", "19", "20", "23", "24", "27", "28", "31", "32", "35", "40", "39", "40", "45", "48", "51", "52", "55", "56", "59", "58", "63", "65", "70", "73", "75", "79", "80", "84", "85", "88", "89", "91", "93", "96", "98", "101", "104", "106", "108", "112", "115", "119", "122", "128", "127", "131", "133", "137", "139", "140", "141", "144", "145", "150", "152", "157", "159", "163", "165", "167", "169", "173", "175", "178", "181", "184", "186", "190", "192", "195", "197", "201", "204", "207", "209", "210", "210", "222", "223", "226", "227", "232", "231", "238", "237", "244", "243", "247", "247", "251", "252", "257", "258", "259", "262"]
     
     
     private let longweightlist: [String] = ["261", "262", "266", "264", "267", "268", "271", "272", "285", "284", "289", "288", "292", "294", "294"]
@@ -36,7 +36,7 @@ struct IsoToElView: View {
             
             VStack {
                 
-                Text("Isotope to Formula").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                Text("Isotope to Element").font(.title).fontWeight(.bold).padding(.top, -10.0)
 
                 
                 GroupBox {
@@ -64,7 +64,7 @@ struct IsoToElView: View {
                     Group {
                         Text("Enter Isotope Weight and Percentage 1:")
                             .fontWeight(.semibold)
-                            .padding(.bottom, -14.0)
+                            .padding(.bottom, -8.0)
                         
                         TextField(getWText(one: goramu),text: $iso1)
                             .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
@@ -75,7 +75,6 @@ struct IsoToElView: View {
                         
                         Spacer()
                             .frame(width: 40.0, height: -40.0)
-                        
                         TextField("Isotope Percentage (Ex. 78)",text: $isop1)
                             .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -87,7 +86,7 @@ struct IsoToElView: View {
                     Group {
                         Text("Enter Isotope Weight and Percentage 2:")
                             .fontWeight(.semibold)
-                            .padding(.bottom, -14.0)
+                            .padding(.bottom, -8.0)
                         
                         TextField(getWText(one: goramu),text: $iso2)
                             .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
@@ -110,7 +109,8 @@ struct IsoToElView: View {
                     Group {
                         Text("Enter Isotope Weight and Percentage 3:")
                             .fontWeight(.semibold)
-                            .padding(.bottom, -14.0)
+                            .padding(.bottom, -8.0)
+                            
                         
                         TextField(getWText(one: goramu),text: $iso3)
                             .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
@@ -134,7 +134,7 @@ struct IsoToElView: View {
                         Text("Element Determined from Isotopes:")
                             .fontWeight(.semibold)
                         
-                        Text(getFromIsotope(i1:iso1, i1p:isop1, i2: iso2, i2p:isop2, i3:iso3, i3p: isop3, ga: goramu))
+                        Text(getFromIsotope(i1:iso1, i1p:isop1, i2: iso2, i2p:isop2, i3:iso3, i3p: isop3, ga: goramu, wlist: weightlist, lwlist: longweightlist, Nlist: elementnamelist, LNlist: longelementnamelist))
                     }
                     
                 }
@@ -163,20 +163,24 @@ func getWhich(one: Bool) -> String {
 
 func getWText(one: Bool) -> String {
     if(one) {
-        return "Isotope Mass (Ex. 4.1e-23)"
+        return "Isotope Mass (Ex. 15)"
     }
     else {
-        return "Isotope Mass (Ex. 15)"
+        return "Isotope Mass (Ex. 4.1e-23)"
     }
 }
 
 
-func getFromIsotope(i1: String, i1p: String, i2: String, i2p: String, i3: String, i3p: String, ga: Bool) -> String {
+func getFromIsotope(i1: String, i1p: String, i2: String, i2p: String, i3: String, i3p: String, ga: Bool, wlist: [String], lwlist: [String], Nlist: [String], LNlist: [String]) -> String {
     
-    var mass1 = Int(i1)
-    var mass2 = Int(i2)
-    var mass3 = Int(i3)
-    var mass = 0
+    let mass1 = Double(i1)
+    let mass2 = Double(i2)
+    let mass3 = Double(i3)
+    var mass = 0.0
+    var stof = 0.0
+    var elementofiso = ""
+    var indexel = 0
+    var intstof = 0
     
     
     if(i1 == "" || i1p == "" || i2 == "" || i2p == "" || i3 == "" || i3p == ""){
@@ -186,17 +190,52 @@ func getFromIsotope(i1: String, i1p: String, i2: String, i2p: String, i3: String
     
     if(ga) {
         
-        mass += (mass1 ?? 1)*Int((round((Double(i1p) ?? 1.0)*100) / 100.0))
+        mass += (mass1 ?? 1) * (((Double(i1p) ?? 1.0)*100) / 10000.0)
+        mass += (mass2 ?? 1) * (((Double(i2p) ?? 1.0)*100) / 10000.0)
+        mass += (mass3 ?? 1) * (((Double(i3p) ?? 1.0)*100) / 10000.0)
         
-        return String(mass)
-        
+        stof = mass
     }
     else {
         
+        mass += (mass1 ?? 1) * (((Double(i1p) ?? 1.0)*100) / 10000.0)
+        mass += (mass2 ?? 1) * (((Double(i2p) ?? 1.0)*100) / 10000.0)
+        mass += (mass3 ?? 1) * (((Double(i3p) ?? 1.0)*100) / 10000.0)
         
-        return "hello"
+        stof = mass * 6.022e23
         
     }
+    
+    intstof = Int(stof.rounded(.toNearestOrAwayFromZero))
+    
+    if(wlist.contains(String(intstof))) {
+        for i in wlist {
+            if(intstof == Int(i)) {
+                
+                indexel = (wlist.firstIndex(of: i) ?? 0)
+                
+            }
+        }
+        
+        elementofiso = Nlist[indexel]
+        
+    }
+    else if(lwlist.contains(String(intstof))) {
+        for j in lwlist {
+            if(intstof == Int(j)) {
+                
+                indexel = (lwlist.firstIndex(of: j) ?? 0)
+                
+            }
+        }
+        
+        elementofiso = LNlist[indexel]
+
+        
+    }
+    
+    
+    return String(elementofiso)
 }
 
 

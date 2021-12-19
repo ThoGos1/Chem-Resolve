@@ -169,9 +169,9 @@ func getEmpire(wat: String, carb: String) -> String {
     }
 
     
-    intx = Int(xbig.rounded(.towardZero))
+    intx = Int(xbig.rounded(.toNearestOrAwayFromZero))
     
-    inty = Int(ysmall.rounded(.towardZero))
+    inty = Int(ysmall.rounded(.toNearestOrAwayFromZero))
     
     if(horc) {
         return "C" + String(intx) + "H" + String(inty)

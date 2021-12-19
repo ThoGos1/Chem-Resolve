@@ -47,7 +47,7 @@ struct HomeView: View {
                     }
                 }
                 
-                NavigationLink(destination: WaveNNodeView()) {
+                NavigationLink(destination: EmpirePercentView()) {
                     HStack {
                         Image(systemName: "waveform.and.magnifyingglass")
                             .frame(height: 40)

@@ -23,13 +23,7 @@ struct ContentView: View {
             NoteView()
                 .tabItem {
                     Image(systemName: "note.text")
-                    Text("Basic Notes")
-                }
-            
-            AdvView()
-                .tabItem {
-                    Image(systemName: "note.text.badge.plus")
-                    Text("Adv. Notes")
+                    Text("Chem Notes")
                 }
             
             HomeView()

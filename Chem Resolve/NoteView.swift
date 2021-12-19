@@ -11,95 +11,215 @@ struct NoteView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: MatterView()) {
-                    HStack {
-                        Image(systemName: "scalemass")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Properties of Matter")
+                
+                Group {
+                    
+                    NavigationLink(destination: MatterView()) {
+                        HStack {
+                            Image(systemName: "scalemass")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Properties of Matter")
+                        }
                     }
+                    
+                    NavigationLink(destination: MixtureView()) {
+                        HStack {
+                            Image(systemName: "hourglass.tophalf.filled")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Mixtures and Solutions")
+                        }
+                    }
+                    
                 }
                 
-                NavigationLink(destination: MixtureView()) {
-                    HStack {
-                        Image(systemName: "hourglass.tophalf.filled")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Mixtures and Solutions")
+                Group {
+                    
+                    NavigationLink(destination: TheMoleView()) {
+                        HStack {
+                            Image(systemName: "circle.hexagongrid.circle")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("The Mole & Composition")
+                        }
                     }
+                    
+                    NavigationLink(destination: NucleusView()) {
+                        HStack {
+                            Image(systemName: "atom")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("The Atom & the Nucleus")
+                        }
+                    }
+                    
                 }
                 
-                NavigationLink(destination: TheMoleView()) {
-                    HStack {
-                        Image(systemName: "circle.hexagongrid.circle")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("The Mole & Composition")
+                Group {
+                    
+                    NavigationLink(destination: ElectronView()) {
+                        HStack {
+                            Image(systemName: "minus.circle")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Electrons")
+                        }
                     }
+                    
+                    NavigationLink(destination: PeriodicTableView()) {
+                        HStack {
+                            Image(systemName: "tablecells")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("The Periodic Table")
+                        }
+                    }
+                    
                 }
                 
-                NavigationLink(destination: NucleusView()) {
-                    HStack {
-                        Image(systemName: "atom")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("The Atom & the Nucleus")
+                Group {
+                    
+                    NavigationLink(destination: IonsView()) {
+                        HStack {
+                            Image(systemName: "plus.forwardslash.minus")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Ions")
+                        }
                     }
+                    
+                    NavigationLink(destination: PrecipitationView()) {
+                        HStack {
+                            Image(systemName: "cloud.rain.fill")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Precipitation Reactions")
+                        }
+                    }
+                    
                 }
                 
-                NavigationLink(destination: ElectronView()) {
-                    HStack {
-                        Image(systemName: "minus.circle")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Electrons")
+                Group {
+                    
+                    NavigationLink(destination: CompoundsView()) {
+                        HStack {
+                            Image(systemName: "aqi.medium")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Compounds and Molecules")
+                        }
                     }
+                    
+                    NavigationLink(destination: ChemNomenclatureView()) {
+                        HStack {
+                            Image(systemName: "textformat.abc")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Chemical Nomenclature")
+                        }
+                    }
+                    
                 }
                 
-                NavigationLink(destination: PeriodicTableView()) {
-                    HStack {
-                        Image(systemName: "tablecells")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("The Periodic Table")
+                Group {
+                    
+                    NavigationLink(destination: PeriodicityView()) {
+                        HStack {
+                            Image(systemName: "lines.measurement.horizontal")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Periodicity")
+                        }
                     }
+                    
+                    NavigationLink(destination: IonNAffinityView()) {
+                        HStack {
+                            Image(systemName: "tray.and.arrow.up")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Ionization and Electron Affinity")
+                        }
+                    }
+                    
                 }
                 
-                NavigationLink(destination: IonsView()) {
-                    HStack {
-                        Image(systemName: "plus.forwardslash.minus")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Ions")
+                Group {
+                    
+                    NavigationLink(destination: ElectromagnetView()) {
+                        HStack {
+                            Image(systemName: "bolt.circle")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Electromagnetism")
+                        }
                     }
+                    
+                    NavigationLink(destination: SpectraView()) {
+                        HStack {
+                            Image(systemName: "sunrise.fill")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Atomic Spectra")
+                        }
+                    }
+                    
                 }
                 
-                NavigationLink(destination: PrecipitationView()) {
-                    HStack {
-                        Image(systemName: "cloud.rain.fill")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Precipitation Reactions")
+                Group {
+                    
+                    NavigationLink(destination: QTheoryView()) {
+                        HStack {
+                            Image(systemName: "circle.grid.cross")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Quantum Theory")
+                        }
                     }
+                    
+                    NavigationLink(destination: WaveParticleView()) {
+                        HStack {
+                            Image(systemName: "dot.radiowaves.right")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Wave-Particle Duality")
+                        }
+                    }
+                    
                 }
                 
-                NavigationLink(destination: CompoundsView()) {
-                    HStack {
-                        Image(systemName: "aqi.medium")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Compounds and Molecules")
+                Group {
+                    
+                    NavigationLink(destination: WaveNNodeView()) {
+                        HStack {
+                            Image(systemName: "waveform.and.magnifyingglass")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("The Wave-Function and Nodes")
+                        }
                     }
+                    
+                    NavigationLink(destination: QuantaNumView()) {
+                        HStack {
+                            Image(systemName: "123.rectangle")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Quantum Numbers")
+                        }
+                    }
+                    
+                    NavigationLink(destination: ElConfigNoteView()) {
+                        HStack {
+                            Image(systemName: "rectangle.and.pencil.and.ellipsis")
+                                .frame(height: 40)
+                                .scaleEffect(1.1)
+                            Text("Electron Configuration")
+                        }
+                    }
+                    
                 }
                 
-                NavigationLink(destination: ChemNomenclatureView()) {
-                    HStack {
-                        Image(systemName: "textformat.abc")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Chemical Nomenclature")
-                    }
-                }
+                
                 
             }
             .navigationTitle("Chemistry Notes")

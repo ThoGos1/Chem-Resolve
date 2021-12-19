@@ -21,7 +21,7 @@ struct CHCombustView: View {
                 Text("Bond Characteristics").font(.title).fontWeight(.bold).padding(.top, -10.0)
 
                 
-                Text("Enter the varibles that you know:")
+                Text("Enter the variables that you know:")
                     .fontWeight(.black)
                     .padding(.vertical)
                 

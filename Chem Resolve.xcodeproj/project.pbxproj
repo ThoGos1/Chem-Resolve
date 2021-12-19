@@ -27,8 +27,8 @@
 		8B02933F273FBBDC00D91B92 /* PeriodicityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02933E273FBBDC00D91B92 /* PeriodicityView.swift */; };
 		8B029341273FBE5F00D91B92 /* IonNAffinityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029340273FBE5F00D91B92 /* IonNAffinityView.swift */; };
 		8B1B23F4272FA318002CC0AB /* MatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23F3272FA318002CC0AB /* MatterView.swift */; };
-		8B1B23F72733B6B5002CC0AB /* AdvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23F62733B6B5002CC0AB /* AdvView.swift */; };
 		8B1B23FC2734BB3A002CC0AB /* ElConfigSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */; };
+		8B539A3C276DBB1C001CE4A9 /* EmpirePercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539A3B276DBB1C001CE4A9 /* EmpirePercentView.swift */; };
 		8BDDD214274C7BA0001ED29E /* BondCharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDD213274C7BA0001ED29E /* BondCharView.swift */; };
 		8BDDD216274D96CA001ED29E /* DilutionSolveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDD215274D96CA001ED29E /* DilutionSolveView.swift */; };
 		8BDDD21827670F99001ED29E /* CHCombustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDD21727670F99001ED29E /* CHCombustView.swift */; };
@@ -64,8 +64,8 @@
 		8B02933E273FBBDC00D91B92 /* PeriodicityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicityView.swift; sourceTree = "<group>"; };
 		8B029340273FBE5F00D91B92 /* IonNAffinityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IonNAffinityView.swift; sourceTree = "<group>"; };
 		8B1B23F3272FA318002CC0AB /* MatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatterView.swift; sourceTree = "<group>"; };
-		8B1B23F62733B6B5002CC0AB /* AdvView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvView.swift; sourceTree = "<group>"; };
 		8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElConfigSearchView.swift; sourceTree = "<group>"; };
+		8B539A3B276DBB1C001CE4A9 /* EmpirePercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpirePercentView.swift; sourceTree = "<group>"; };
 		8BDDD213274C7BA0001ED29E /* BondCharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BondCharView.swift; sourceTree = "<group>"; };
 		8BDDD215274D96CA001ED29E /* DilutionSolveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DilutionSolveView.swift; sourceTree = "<group>"; };
 		8BDDD21727670F99001ED29E /* CHCombustView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHCombustView.swift; sourceTree = "<group>"; };
@@ -141,6 +141,7 @@
 				8BDDD215274D96CA001ED29E /* DilutionSolveView.swift */,
 				8BDDD21727670F99001ED29E /* CHCombustView.swift */,
 				8BF55028276ACAEE00039679 /* IsoToElView.swift */,
+				8B539A3B276DBB1C001CE4A9 /* EmpirePercentView.swift */,
 			);
 			path = "Solver View Files";
 			sourceTree = "<group>";
@@ -164,14 +165,13 @@
 		8BF5C55E272B6CB0006CC018 /* Chem Resolve */ = {
 			isa = PBXGroup;
 			children = (
-				8B02932F273F8EE800D91B92 /* Adv View Files */,
 				8BF5C55F272B6CB0006CC018 /* Chem_ResolveApp.swift */,
 				8BF5C561272B6CB0006CC018 /* ContentView.swift */,
-				8B1B23F62733B6B5002CC0AB /* AdvView.swift */,
 				8BF5C571272B8250006CC018 /* HomeView.swift */,
 				8BDDD212274C7B72001ED29E /* Solver View Files */,
 				8BF5C56F272B8119006CC018 /* NoteView.swift */,
 				8B1B23F2272FA2F0002CC0AB /* Note View Files */,
+				8B02932F273F8EE800D91B92 /* Adv View Files */,
 				8BF5C573272C930C006CC018 /* ExtraView.swift */,
 				8B1B23F82734BAF9002CC0AB /* Extra View Files */,
 				8BF5C56D272B6D18006CC018 /* TesterView.swift */,
@@ -281,7 +281,7 @@
 				8BF5C570272B8119006CC018 /* NoteView.swift in Sources */,
 				8BDDD21827670F99001ED29E /* CHCombustView.swift in Sources */,
 				8BF5C572272B8250006CC018 /* HomeView.swift in Sources */,
-				8B1B23F72733B6B5002CC0AB /* AdvView.swift in Sources */,
+				8B539A3C276DBB1C001CE4A9 /* EmpirePercentView.swift in Sources */,
 				8B029324273F53E700D91B92 /* ElectronView.swift in Sources */,
 				8B02931C273DD33400D91B92 /* MixtureView.swift in Sources */,
 				8BF5C560272B6CB0006CC018 /* Chem_ResolveApp.swift in Sources */,

@@ -41,7 +41,7 @@ struct IsoToElView: View {
                 
                 GroupBox {
                     
-                    Text("Enter the varibles that you know:")
+                    Text("Enter the variables that you know:")
                         .fontWeight(.black)
                         .padding(.bottom, 5.0)
                     

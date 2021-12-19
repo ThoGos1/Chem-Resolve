@@ -1,17 +1,17 @@
 //
-//  EmpirePercentView.swift
+//  AdvCHOCombustView.swift
 //  Chem Resolve
 //
-//  Created by Thomas Gosvig on 12/17/21.
+//  Created by Thomas Gosvig on 12/18/21.
 //
 
 import SwiftUI
 
-struct EmpirePercentView: View {
+struct AdvCHOCombustView: View {
     
-    @State private var cp: String = ""
-    @State private var op: String = ""
-    @State private var hp: String = ""
+    @State private var co2g: String = ""
+    @State private var h2og: String = ""
+    @State private var og: String = ""
     @State private var molmass: String = ""
     
     var body: some View {
@@ -20,7 +20,7 @@ struct EmpirePercentView: View {
             
             VStack {
                 
-                Text("Formula from Percentages").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                Text("CxHyOz Combustion").font(.title).fontWeight(.bold).padding(.top, -10.0)
 
                 
                 Text("Enter the variables that you know:")
@@ -31,10 +31,22 @@ struct EmpirePercentView: View {
                 GroupBox {
                     
                     Group {
-                        Text("Enter Percentage of Carbon:")
+                        Text("Enter Grams of CO2 produced:")
                             .fontWeight(.semibold)
                         
-                        TextField("Carbon (Ex. 40.9)",text: $cp)
+                        TextField("CO2 (Ex. 8.272)",text: $co2g)
+                            .frame(width: 300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0)
+                            .multilineTextAlignment(.center)
+                            .font(.title2)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                    }
+                    
+                    Group {
+                        Text("Enter Grams of H2O produced:")
+                            .fontWeight(.semibold)
+                        
+                        TextField("H2O (Ex. 4.515)",text: $h2og)
                             .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
@@ -42,24 +54,12 @@ struct EmpirePercentView: View {
 
                     }
                     
-                    Group {
-                        Text("Enter Percentage of Hydrogen:")
-                            .fontWeight(.semibold)
-                        
-                        TextField("Hydrogen (Ex. 4.58)",text: $hp)
-                            .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
-                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-
-                    }
-                    
                     
                     Group {
-                        Text("Enter Percentage of Oxygen:")
+                        Text("Enter Grams of the Hydrocarbon:")
                             .fontWeight(.semibold)
                         
-                        TextField("Oxygen (Ex. 54.5)",text: $op)
+                        TextField("Oxygen (Ex. 3.765)",text: $og)
                             .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
@@ -72,7 +72,7 @@ struct EmpirePercentView: View {
                         Text("Empirical Formula of Hydrocarbon:")
                             .fontWeight(.semibold)
                         
-                        Text(getEfromP(cper: cp, hper: hp, oper: op))
+                        Text(getEfromCHnO(co2m:co2g, h2om: h2og, om: og))
                             .padding(.bottom, 20.0)
                     }
                     
@@ -85,7 +85,7 @@ struct EmpirePercentView: View {
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.center)
                         
-                        TextField("Molar Mass (Ex. 30.07)",text: $molmass)
+                        TextField("Molar Mass (Ex. 300.47)",text: $molmass)
                             .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/60.0/*@END_MENU_TOKEN@*/)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
@@ -97,129 +97,121 @@ struct EmpirePercentView: View {
                         Text("Molecular Formula of Hydrocarbon:")
                             .fontWeight(.semibold)
                         
-                        Text(getEfromM(cper: cp, hper: hp, oper: op, mfac: molmass))
+                        Text(getMFfromCHnO(co2m: co2g, h2om: h2og, om: og, mfac: molmass))
                     }
                     
                 }
-                
                 Spacer()
-                
             }
-            
         }
         .padding(.horizontal)
-        
-        
     }
 }
 
 
-func getEfromP(cper: String, hper: String, oper: String) -> String {
+func getEfromCHnO(co2m: String, h2om: String, om: String) -> String {
     
-    let cmol = ((Double(cper) ?? 1000) / 12)
-    let hmol = ((Double(hper) ?? 1000) / 1)
-    let omol = ((Double(oper) ?? 1000) / 16)
+    let carbm = (Double(co2m) ?? 1)/44*12
+    let hydrom = (Double(h2om) ?? 1)/18*2
+    let oxym = (Double(om) ?? 1) - carbm - hydrom
+    
+    let carbmol = carbm/12
+    let hydromol = hydrom/1
+    let oxymol = oxym/16
+    
+    let molarr = [carbmol, hydromol, oxymol]
+    
     var factor = 1.0
-    var cc = 0.0
-    var hc = 0.0
-    var oc = 0.0
-    let molarr = [cmol, hmol, omol]
-    var hasnto = true
+    
     var intc = 0
     var inth = 0
     var into = 0
     
+    var cc = 0.0
+    var hc = 0.0
+    var oc = 0.0
     
     
-    if(oper=="") {
-        hasnto = true
-    }
-    else {
-        hasnto = false
-    }
-    
-    
-    if(cper == "" || hper == "") {
+    if(co2m == "" || h2om == "" || om == "") {
         return "None"
     }
     
     
-    if(molarr.min() == Optional(cmol)){
+    if(molarr.min() == Optional(carbmol)){
         
         cc = 1.0
         
-        if(cmol==hmol) {
+        if(carbmol==hydromol) {
             hc = 1.0
         }
-        else if(!(cmol==hmol)) {
+        else if(!(carbmol==hydromol)) {
             
-            hc = hmol/cmol
+            hc = hydromol/carbmol
             
         }
         
-        if(cmol==omol) {
+        if(carbmol==oxymol) {
             oc = 1.0
         }
-        else if(!(cmol==omol)) {
+        else if(!(carbmol==oxymol)) {
             
-            oc = omol/cmol
+            oc = oxymol/carbmol
             
         }
         
     }
     
-    if(molarr.min() == Optional(hmol)){
+    if(molarr.min() == Optional(hydromol)){
         
         hc = 1.0
         
-        if(hmol==cmol) {
+        if(hydromol==carbmol) {
             cc = 1.0
         }
-        else if(!(hmol==cmol)) {
+        else if(!(hydromol==carbmol)) {
             
-            cc = cmol/hmol
+            cc = carbmol/hydromol
             
         }
         
         
-        if(hmol==omol) {
+        if(hydromol==oxymol) {
             oc = 1.0
         }
-        else if(!(hmol==omol)) {
+        else if(!(hydromol==oxymol)) {
             
-            oc = omol/hmol
+            oc = oxymol/hydromol
             
         }
         
     }
     
-    if(!false && molarr.min() == Optional(omol)){
+    if(molarr.min() == Optional(oxymol)){
         
         oc = 1.0
         
-        if(omol==hmol) {
+        if(oxymol==hydromol) {
             hc = 1.0
         }
-        else if(!(omol==hmol)) {
+        else if(!(oxymol==hydromol)) {
             
-            hc = hmol/omol
+            hc = hydromol/oxymol
             
         }
         
         
         
-        if(omol==cmol) {
+        if(oxymol==carbmol) {
             cc = 1.0
         }
-        else if(!(omol==cmol)) {
+        else if(!(oxymol==carbmol)) {
             
-            cc = cmol/omol
+            cc = carbmol/oxymol
             
         }
         
         
     }
-    
     
     
     if(cc != 1.0) {
@@ -286,7 +278,7 @@ func getEfromP(cper: String, hper: String, oper: String) -> String {
         
     }
     
-    if(hasnto && oc != 1.0) {
+    if(oc != 1.0) {
         
         if((Int(Double(oc) * 10) - (Int(oc) * 100)) == 25){
             factor = 4.0
@@ -331,47 +323,34 @@ func getEfromP(cper: String, hper: String, oper: String) -> String {
     into = Int(oc.rounded(.toNearestOrAwayFromZero))
     
     
-    if(oper != "") {
-        
-        return "C" + String(intc) + "H" + String(inth) + "O" + String(into)
-        
-    }
-    
-    if(oper == "") {
-        
-        return "C" + String(intc) + "H" + String(inth)
-        
-    }
-    
-    return "None"
-
+    return "C" + String(intc) + "H" + String(inth) + "O" + String(into)
 }
 
 
-
-func getEfromM(cper: String, hper: String, oper: String, mfac: String) -> String {
+func getMFfromCHnO(co2m: String, h2om: String, om: String, mfac: String) -> String {
     
-    let cmol = ((Double(cper) ?? 1000) / 12)
-    let hmol = ((Double(hper) ?? 1000) / 1)
-    let omol = ((Double(oper) ?? 1000) / 16)
+    let carbm = (Double(co2m) ?? 1)/44*12
+    let hydrom = (Double(h2om) ?? 1)/18*2
+    let oxym = (Double(om) ?? 1) - carbm - hydrom
+    
+    let carbmol = carbm/12
+    let hydromol = hydrom/1
+    let oxymol = oxym/16
+    
+    let molarr = [carbmol, hydromol, oxymol]
+    
     var factor = 1.0
-    var cc = 0.0
-    var hc = 0.0
-    var oc = 0.0
-    let molarr = [cmol, hmol, omol]
-    var hasnto = true
+    
     var intc = 0
     var inth = 0
     var into = 0
+    
+    var cc = 0.0
+    var hc = 0.0
+    var oc = 0.0
+    
     let muchstuff = Int(Double(mfac) ?? 1.0)
     var factor2 = 1
-    
-    if(oper=="") {
-        hasnto = true
-    }
-    else {
-        hasnto = false
-    }
     
     
     if(mfac == "") {
@@ -379,82 +358,81 @@ func getEfromM(cper: String, hper: String, oper: String, mfac: String) -> String
     }
     
     
-    if(molarr.min() == Optional(cmol)){
+    if(molarr.min() == Optional(carbmol)){
         
         cc = 1.0
         
-        if(cmol==hmol) {
+        if(carbmol==hydromol) {
             hc = 1.0
         }
-        else if(!(cmol==hmol)) {
+        else if(!(carbmol==hydromol)) {
             
-            hc = hmol/cmol
+            hc = hydromol/carbmol
             
         }
         
-        if(cmol==omol) {
+        if(carbmol==oxymol) {
             oc = 1.0
         }
-        else if(!(cmol==omol)) {
+        else if(!(carbmol==oxymol)) {
             
-            oc = omol/cmol
+            oc = oxymol/carbmol
             
         }
         
     }
     
-    if(molarr.min() == Optional(hmol)){
+    if(molarr.min() == Optional(hydromol)){
         
         hc = 1.0
         
-        if(hmol==cmol) {
+        if(hydromol==carbmol) {
             cc = 1.0
         }
-        else if(!(hmol==cmol)) {
+        else if(!(hydromol==carbmol)) {
             
-            cc = cmol/hmol
+            cc = carbmol/hydromol
             
         }
         
         
-        if(hmol==omol) {
+        if(hydromol==oxymol) {
             oc = 1.0
         }
-        else if(!(hmol==omol)) {
+        else if(!(hydromol==oxymol)) {
             
-            oc = omol/hmol
+            oc = oxymol/hydromol
             
         }
         
     }
     
-    if(molarr.min() == Optional(omol)){
+    if(molarr.min() == Optional(oxymol)){
         
         oc = 1.0
         
-        if(omol==hmol) {
+        if(oxymol==hydromol) {
             hc = 1.0
         }
-        else if(!(omol==hmol)) {
+        else if(!(oxymol==hydromol)) {
             
-            hc = hmol/omol
+            hc = hydromol/oxymol
             
         }
         
         
         
-        if(omol==cmol) {
+        if(oxymol==carbmol) {
             cc = 1.0
         }
-        else if(!(omol==cmol)) {
+        else if(!(oxymol==carbmol)) {
             
-            cc = cmol/omol
+            cc = carbmol/oxymol
             
         }
         
         
     }
-    
     
     
     if(cc != 1.0) {
@@ -521,7 +499,7 @@ func getEfromM(cper: String, hper: String, oper: String, mfac: String) -> String
         
     }
     
-    if(hasnto && oc != 1.0) {
+    if(oc != 1.0) {
         
         if((Int(Double(oc) * 10) - (Int(oc) * 100)) == 25){
             factor = 4.0
@@ -566,44 +544,22 @@ func getEfromM(cper: String, hper: String, oper: String, mfac: String) -> String
     into = Int(oc.rounded(.toNearestOrAwayFromZero))
     
     
-    if(hasnto) {
-        
-        factor2 = muchstuff/(intc*12 + inth)
-        
-    }
-    else {
-        
-        factor2 = muchstuff/(intc*12 + inth + into*16)
-        
-    }
-    
+    factor2 = muchstuff/(intc*12 + inth + into*16)
+
     intc = intc*factor2
     inth = inth*factor2
     into = into*factor2
     
     
-    if(oper != "") {
-        
-        return "C" + String(intc) + "H" + String(inth) + "O" + String(into)
-        
-    }
-    
-    if(oper == "") {
-        
-        return "C" + String(intc) + "H" + String(inth)
-        
-    }
-    
-    return "None"
-
+    return "C" + String(intc) + "H" + String(inth) + "O" + String(into)
 }
 
 
 
 
 
-struct EmpirePercentView_Previews: PreviewProvider {
+struct AdvCHOCombustView_Previews: PreviewProvider {
     static var previews: some View {
-        EmpirePercentView()
+        AdvCHOCombustView()
     }
 }

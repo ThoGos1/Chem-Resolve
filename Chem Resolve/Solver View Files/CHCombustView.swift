@@ -18,7 +18,7 @@ struct CHCombustView: View {
             
             VStack {
                 
-                Text("Bond Characteristics").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                Text("CxHy Combustion").font(.title).fontWeight(.bold).padding(.top, -10.0)
 
                 
                 Text("Enter the variables that you know:")

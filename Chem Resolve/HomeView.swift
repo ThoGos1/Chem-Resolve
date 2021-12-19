@@ -20,12 +20,21 @@ struct HomeView: View {
                     }
                 }
                 
-                NavigationLink(destination: SpectraView()) {
+                NavigationLink(destination: AdvCHOCombustView()) {
                     HStack {
                         Image(systemName: "flame.circle")
                             .frame(height: 40)
                             .scaleEffect(1.1)
                         Text("CxHyOz Combustion Analysis")
+                    }
+                }
+                
+                NavigationLink(destination: EmpirePercentView()) {
+                    HStack {
+                        Image(systemName: "waveform.and.magnifyingglass")
+                            .frame(height: 40)
+                            .scaleEffect(1.1)
+                        Text("Empirical Formula & Percentage")
                     }
                 }
                 
@@ -44,24 +53,6 @@ struct HomeView: View {
                             .frame(height: 40)
                             .scaleEffect(1.1)
                         Text("Dilution Calculator")
-                    }
-                }
-                
-                NavigationLink(destination: EmpirePercentView()) {
-                    HStack {
-                        Image(systemName: "waveform.and.magnifyingglass")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Empirical Formula & Percentage")
-                    }
-                }
-                
-                NavigationLink(destination: QuantaNumView()) {
-                    HStack {
-                        Image(systemName: "123.rectangle")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Mole and Mass Conversions")
                     }
                 }
                 

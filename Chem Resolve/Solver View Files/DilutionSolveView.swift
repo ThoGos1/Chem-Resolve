@@ -21,7 +21,7 @@ struct DilutionSolveView: View {
             
             VStack {
                 
-                Text("Bond Characteristics").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                Text("Dilution Solver").font(.title).fontWeight(.bold).padding(.top, -10.0)
 
                 
                 Text("Enter the variables that you know:")

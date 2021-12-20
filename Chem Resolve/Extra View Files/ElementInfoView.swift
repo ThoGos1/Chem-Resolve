@@ -30,7 +30,7 @@ struct ElementInfoView: View {
     
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Element Info").font(.title).fontWeight(.bold).padding(.top, -10.0)

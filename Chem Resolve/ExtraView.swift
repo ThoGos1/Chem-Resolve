@@ -80,7 +80,7 @@ struct ExtraView: View {
 struct AboutView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             
             VStack {
                 

@@ -51,7 +51,7 @@ struct ElConfigSearchView: View {
     
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Electron Trends").font(.title).fontWeight(.bold).padding(.top, -10.0)

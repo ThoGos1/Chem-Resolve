@@ -59,7 +59,8 @@ struct ExtraView: View {
                     Image("Chem Logo nob")
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 200.0, height: 80.0)
+                        .frame(width: 200.0, height: 30.0)
+                        .scaleEffect(1.6)
                     
                     Text("Version: bruh")
                 }
@@ -78,15 +79,13 @@ struct ExtraView: View {
 
 struct AboutView: View {
     var body: some View {
-        ZStack {
+        
+        ScrollView {
+            
             VStack {
-                Text("About Me")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    
-                Spacer()
-            }
-            VStack {
+                
+                Text("About Me").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                
                 Text("Thank you for using Chem Resolve, every download is appreciated greatly.\nChem Resolve is developed my me, ThoGos.\nI'm a first-generation college student at UC San Diego.\nI made this app to help college students like myself, that would rather focus learning and analysis and less on busy work.")
                     .padding(.horizontal, 20).lineSpacing(8).padding(.bottom, 15.0)
                 
@@ -95,9 +94,11 @@ struct AboutView: View {
                 
                 Spacer()
             }
-            .padding(.top, 55.0)
+            
         }
+            
     }
+        
 }
 
 

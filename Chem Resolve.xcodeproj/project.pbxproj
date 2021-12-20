@@ -39,7 +39,6 @@
 		8BF5C562272B6CB0006CC018 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5C561272B6CB0006CC018 /* ContentView.swift */; };
 		8BF5C564272B6CB1006CC018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BF5C563272B6CB1006CC018 /* Assets.xcassets */; };
 		8BF5C567272B6CB1006CC018 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BF5C566272B6CB1006CC018 /* Preview Assets.xcassets */; };
-		8BF5C56E272B6D18006CC018 /* TesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5C56D272B6D18006CC018 /* TesterView.swift */; };
 		8BF5C570272B8119006CC018 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5C56F272B8119006CC018 /* NoteView.swift */; };
 		8BF5C572272B8250006CC018 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5C571272B8250006CC018 /* HomeView.swift */; };
 		8BF5C574272C930D006CC018 /* ExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5C573272C930C006CC018 /* ExtraView.swift */; };
@@ -79,7 +78,6 @@
 		8BF5C561272B6CB0006CC018 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8BF5C563272B6CB1006CC018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BF5C566272B6CB1006CC018 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8BF5C56D272B6D18006CC018 /* TesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesterView.swift; sourceTree = "<group>"; };
 		8BF5C56F272B8119006CC018 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		8BF5C571272B8250006CC018 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8BF5C573272C930C006CC018 /* ExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraView.swift; sourceTree = "<group>"; };
@@ -132,6 +130,7 @@
 		8B1B23F82734BAF9002CC0AB /* Extra View Files */ = {
 			isa = PBXGroup;
 			children = (
+				8B362CB8277050CF00391E31 /* WebView.swift */,
 				8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */,
 				8B029319273CF89100D91B92 /* ElementInfoView.swift */,
 			);
@@ -179,8 +178,6 @@
 				8B02932F273F8EE800D91B92 /* Adv View Files */,
 				8BF5C573272C930C006CC018 /* ExtraView.swift */,
 				8B1B23F82734BAF9002CC0AB /* Extra View Files */,
-				8BF5C56D272B6D18006CC018 /* TesterView.swift */,
-				8B362CB8277050CF00391E31 /* WebView.swift */,
 				8BF5C563272B6CB1006CC018 /* Assets.xcassets */,
 				8BF5C565272B6CB1006CC018 /* Preview Content */,
 			);
@@ -268,7 +265,6 @@
 				8B029333273F920000D91B92 /* SpectraView.swift in Sources */,
 				8B029335273F9DF800D91B92 /* QTheoryView.swift in Sources */,
 				8B029341273FBE5F00D91B92 /* IonNAffinityView.swift in Sources */,
-				8BF5C56E272B6D18006CC018 /* TesterView.swift in Sources */,
 				8B02932E273F88AD00D91B92 /* ChemNomenclatureView.swift in Sources */,
 				8B02933F273FBBDC00D91B92 /* PeriodicityView.swift in Sources */,
 				8BF55029276ACAEE00039679 /* IsoToElView.swift in Sources */,

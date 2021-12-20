@@ -74,12 +74,6 @@ struct ExtraView: View {
                 }
             }
             
-//            Image("ChemLogo")
-//                .resizable(resizingMode: .stretch)
-//                .aspectRatio(contentMode: .fit)
-//                .scaleEffect(0.3)
-//                .offset(x: 0, y: 200)
-            
             .navigationTitle("Extra's")
         }
     }

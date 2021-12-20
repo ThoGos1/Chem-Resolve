@@ -194,7 +194,7 @@ func getMolFor(wat: String, carb: String, wfor: String) -> String {
     var intx = 0
     var inty = 0
     var horc = false
-    let howmuch = Int(wfor) ?? 1
+    let howmuch = Int(Double(wfor) ?? 1.0)
     
     
     if(wfor == "") {

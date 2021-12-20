@@ -195,6 +195,7 @@ struct JavaliteView: View {
         NavigationView {
             SwiftUIWebView(url: URL(string: "https://www.javalite.com/"))
         }
+        .navigationTitle("JavaLite")
         
     }
     
@@ -209,6 +210,7 @@ struct ExtraView_Previews: PreviewProvider {
                 
         }
         
+        JavaliteView()
         
     }
 }

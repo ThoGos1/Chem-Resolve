@@ -92,7 +92,7 @@ struct AboutView: View {
             
             VStack {
                 
-                Text("About Me").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                Text("About Me").font(.title).fontWeight(.bold).padding(.top, -10.0).padding(.bottom)
                 
                 Text("Thank you for using Chem Resolve, every download is appreciated greatly.\nChem Resolve is developed my me, ThoGos.\nI'm a first-generation college student at UC San Diego.\nI made this app to help college students like myself, that would rather focus learning and analysis and less on busy work.")
                     .padding(.horizontal, 20).lineSpacing(8).padding(.bottom, 15.0)
@@ -209,8 +209,6 @@ struct ExtraView_Previews: PreviewProvider {
             ExtraView()
                 
         }
-        
-        JavaliteView()
-        
+                
     }
 }

@@ -30,28 +30,36 @@ struct ExtraView: View {
                             Text("Minimalist Periodic Table Background")
                         }
                         
-                        NavigationLink(destination: OrbitalTableView()) {
-                            Text("Single Electron Orbital Graph")
+                        Group {
+                            
+                            NavigationLink(destination: OrbitalTableView()) {
+                                Text("Single Electron Orbital Graph")
+                            }
+                            
+                            NavigationLink(destination: RadiiView()) {
+                                Text("Atomic Radii Graphic")
+                            }
+                            
+                            NavigationLink(destination: IonRadiiView()) {
+                                Text("Ionic Radii Graphic")
+                            }
+                            
+                            NavigationLink(destination: CommonIonView()) {
+                                Text("Common Ions Nomeclature")
+                            }
+                            
+                            NavigationLink(destination: SolubilityView()) {
+                                Text("Solubility table")
+                            }
+                            
+                            NavigationLink(destination: LewisView()) {
+                                Text("Lewis Structure and VSERP Table")
+                            }
+                            
                         }
                         
-                        NavigationLink(destination: RadiiView()) {
-                            Text("Atomic Radii Graphic")
-                        }
-                        
-                        NavigationLink(destination: IonRadiiView()) {
-                            Text("Ionic Radii Graphic")
-                        }
-                        
-                        NavigationLink(destination: CommonIonView()) {
-                            Text("Common Ions Nomeclature")
-                        }
-                        
-                        NavigationLink(destination: SolubilityView()) {
-                            Text("Solubility table")
-                        }
-                        
-                        NavigationLink(destination: LewisView()) {
-                            Text("Lewis Structure and VSERP Table")
+                        NavigationLink(destination: JavaliteView()) {
+                            Text("Self-Written Chemistry Articles")
                         }
                         
                     }
@@ -180,6 +188,17 @@ struct LewisView: View {
                 .offset(x: -3, y: 0)
         }
     }
+}
+
+struct JavaliteView: View {
+    var body: some View {
+        NavigationView {
+            SwiftUIWebView(url: URL(string: "https://www.javalite.com/"))
+        }
+        
+    }
+    
+    
 }
 
 

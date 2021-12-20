@@ -28,6 +28,7 @@
 		8B029341273FBE5F00D91B92 /* IonNAffinityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B029340273FBE5F00D91B92 /* IonNAffinityView.swift */; };
 		8B1B23F4272FA318002CC0AB /* MatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23F3272FA318002CC0AB /* MatterView.swift */; };
 		8B1B23FC2734BB3A002CC0AB /* ElConfigSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */; };
+		8B362CB9277050CF00391E31 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B362CB8277050CF00391E31 /* WebView.swift */; };
 		8B539A3C276DBB1C001CE4A9 /* EmpirePercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539A3B276DBB1C001CE4A9 /* EmpirePercentView.swift */; };
 		8B539A40276F05BE001CE4A9 /* AdvCHOCombustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539A3F276F05BE001CE4A9 /* AdvCHOCombustView.swift */; };
 		8BDDD214274C7BA0001ED29E /* BondCharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDD213274C7BA0001ED29E /* BondCharView.swift */; };
@@ -66,6 +67,7 @@
 		8B029340273FBE5F00D91B92 /* IonNAffinityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IonNAffinityView.swift; sourceTree = "<group>"; };
 		8B1B23F3272FA318002CC0AB /* MatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatterView.swift; sourceTree = "<group>"; };
 		8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElConfigSearchView.swift; sourceTree = "<group>"; };
+		8B362CB8277050CF00391E31 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		8B539A3B276DBB1C001CE4A9 /* EmpirePercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpirePercentView.swift; sourceTree = "<group>"; };
 		8B539A3F276F05BE001CE4A9 /* AdvCHOCombustView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvCHOCombustView.swift; sourceTree = "<group>"; };
 		8BDDD213274C7BA0001ED29E /* BondCharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BondCharView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				8BF5C573272C930C006CC018 /* ExtraView.swift */,
 				8B1B23F82734BAF9002CC0AB /* Extra View Files */,
 				8BF5C56D272B6D18006CC018 /* TesterView.swift */,
+				8B362CB8277050CF00391E31 /* WebView.swift */,
 				8BF5C563272B6CB1006CC018 /* Assets.xcassets */,
 				8BF5C565272B6CB1006CC018 /* Preview Content */,
 			);
@@ -273,6 +276,7 @@
 				8BF5C574272C930D006CC018 /* ExtraView.swift in Sources */,
 				8B02932A273F7D9F00D91B92 /* PrecipitationView.swift in Sources */,
 				8B029320273F4B8D00D91B92 /* NucleusView.swift in Sources */,
+				8B362CB9277050CF00391E31 /* WebView.swift in Sources */,
 				8B029339273FA7A000D91B92 /* WaveNNodeView.swift in Sources */,
 				8B02932C273F81F700D91B92 /* CompoundsView.swift in Sources */,
 				8B029331273F8F1C00D91B92 /* ElectromagnetView.swift in Sources */,

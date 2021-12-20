@@ -10,7 +10,7 @@ import SwiftUI
 struct SpectraView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
 
                 Text("Atomic Spectra").font(.title).fontWeight(.bold).padding(.top, -10.0)

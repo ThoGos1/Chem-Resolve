@@ -10,7 +10,7 @@ import SwiftUI
 struct QTheoryView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Quantum Theory").font(.title).fontWeight(.bold).padding(.top, -10.0)

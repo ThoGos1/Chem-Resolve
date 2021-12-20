@@ -10,7 +10,7 @@ import SwiftUI
 struct NucleusView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             
             VStack {
                 

@@ -14,7 +14,7 @@ struct CHCombustView: View {
     
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             
             VStack {
                 

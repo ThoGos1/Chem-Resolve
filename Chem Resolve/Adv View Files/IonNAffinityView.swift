@@ -10,7 +10,7 @@ import SwiftUI
 struct IonNAffinityView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Ionization and Affinity:").font(.title).fontWeight(.bold).padding(.top, -10.0)

@@ -10,7 +10,7 @@ import SwiftUI
 struct PeriodicTableView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("The Periodic Table").font(.title).fontWeight(.bold).padding(.top, -10.0)

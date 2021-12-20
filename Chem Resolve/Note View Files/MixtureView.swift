@@ -10,7 +10,7 @@ import SwiftUI
 struct MixtureView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Mixtures and Solutions").font(.title).fontWeight(.bold).padding(.top, -10.0)

@@ -10,7 +10,7 @@ import SwiftUI
 struct ElectronView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("The Electron").font(.title).fontWeight(.bold).padding(.top, -10.0)

@@ -10,7 +10,7 @@ import SwiftUI
 struct MatterView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             
             VStack {
                 

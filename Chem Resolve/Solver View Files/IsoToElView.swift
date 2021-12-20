@@ -32,7 +32,7 @@ struct IsoToElView: View {
     
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             
             VStack {
                 

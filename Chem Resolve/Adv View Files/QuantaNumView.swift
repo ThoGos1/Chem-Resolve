@@ -10,7 +10,7 @@ import SwiftUI
 struct QuantaNumView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Quantum Numbers:").font(.title).fontWeight(.bold).padding(.top, -10.0)

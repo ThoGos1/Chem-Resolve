@@ -10,7 +10,7 @@ import SwiftUI
 struct TheMoleView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("The Mole").font(.title).fontWeight(.bold).padding(.top, -10.0)

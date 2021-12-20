@@ -10,7 +10,7 @@ import SwiftUI
 struct PeriodicityView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Periodicity:").font(.title).fontWeight(.bold).padding(.top, -10.0)

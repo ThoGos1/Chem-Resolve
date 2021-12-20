@@ -10,7 +10,7 @@ import SwiftUI
 struct ElConfigNoteView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Electron configuration:").font(.title).fontWeight(.bold).padding(.top, -10.0)

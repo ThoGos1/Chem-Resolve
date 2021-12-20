@@ -10,7 +10,7 @@ import SwiftUI
 struct PrecipitationView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Precipitation Reactions").font(.title).fontWeight(.bold).padding(.top, -10.0)

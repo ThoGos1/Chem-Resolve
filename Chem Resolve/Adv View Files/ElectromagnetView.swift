@@ -10,7 +10,7 @@ import SwiftUI
 struct ElectromagnetView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Electromagnetism").font(.title).fontWeight(.bold).padding(.top, -10.0)

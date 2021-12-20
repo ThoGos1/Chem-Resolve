@@ -22,7 +22,7 @@ struct BondCharView: View {
     
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Bond Characteristics").font(.title).fontWeight(.bold).padding(.top, -10.0)

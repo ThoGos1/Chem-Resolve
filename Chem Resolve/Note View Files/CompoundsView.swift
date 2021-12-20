@@ -10,7 +10,7 @@ import SwiftUI
 struct CompoundsView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Compounds & Molecules:").font(.title).fontWeight(.bold).padding(.top, -10.0)

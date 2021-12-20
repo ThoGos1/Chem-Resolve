@@ -10,7 +10,7 @@ import SwiftUI
 struct WaveNNodeView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Wave Function & Nodes:").font(.title).fontWeight(.bold).padding(.top, -10.0)

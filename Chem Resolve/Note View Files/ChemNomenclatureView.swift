@@ -10,7 +10,7 @@ import SwiftUI
 struct ChemNomenclatureView: View {
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 
                 Text("Chemical Nomeclature").font(.title).fontWeight(.bold).padding(.top, -10.0)

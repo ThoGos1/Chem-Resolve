@@ -63,13 +63,6 @@ struct ExtraView: View {
                         }
                         
                     }
-                    
-                    Image("Chem Logo nob")
-                        .resizable(resizingMode: .stretch)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 200.0, height: 30.0)
-                        .scaleEffect(1.6)
-                    
                     Text("Version: " + getVer())
                 }
             }

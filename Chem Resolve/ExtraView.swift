@@ -70,7 +70,7 @@ struct ExtraView: View {
                         .frame(width: 200.0, height: 30.0)
                         .scaleEffect(1.6)
                     
-                    Text("Version: bruh")
+                    Text("Version: " + getVer())
                 }
             }
             
@@ -194,6 +194,11 @@ struct JavaliteView: View {
     }
     
     
+}
+
+
+func getVer() -> String {
+    return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Test"
 }
 
 

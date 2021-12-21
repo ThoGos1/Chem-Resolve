@@ -191,8 +191,15 @@ struct JavaliteView: View {
 
 
 func getVer() -> String {
-    return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Test"
+    
+    let ver = (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Test") + " ("
+    
+    let bui = (Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "Test") + ")"
+    
+    return ver + bui
 }
+
+
 
 
 struct ExtraView_Previews: PreviewProvider {

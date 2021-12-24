@@ -14,7 +14,7 @@ struct HomeView: View {
                 NavigationLink(destination: CHCombustView()) {
                     HStack {
                         Image(systemName: "flame")
-                            .frame(height: 40)
+                            .frame(width: 20.0, height: 40)
                             .scaleEffect(1.1)
                         Text("CxHy Combustion Analysis")
                     }
@@ -23,7 +23,7 @@ struct HomeView: View {
                 NavigationLink(destination: AdvCHOCombustView()) {
                     HStack {
                         Image(systemName: "flame.circle")
-                            .frame(height: 40)
+                            .frame(width: 20.0, height: 40)
                             .scaleEffect(1.1)
                         Text("CxHyOz Combustion Analysis")
                     }
@@ -32,8 +32,8 @@ struct HomeView: View {
                 NavigationLink(destination: EmpirePercentView()) {
                     HStack {
                         Image(systemName: "waveform.and.magnifyingglass")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
+                            .frame(width: 20.0, height: 40)
+                            .scaleEffect(1.105)
                         Text("Empirical Formula & Percentage")
                     }
                 }
@@ -41,7 +41,7 @@ struct HomeView: View {
                 NavigationLink(destination: BondCharView()) {
                     HStack {
                         Image(systemName: "circle.grid.cross")
-                            .frame(height: 40)
+                            .frame(width: 20.0, height: 40)
                             .scaleEffect(1.1)
                         Text("Bond Characteristics of X-Y")
                     }
@@ -50,7 +50,7 @@ struct HomeView: View {
                 NavigationLink(destination: DilutionSolveView()) {
                     HStack {
                         Image(systemName: "dot.radiowaves.right")
-                            .frame(height: 40)
+                            .frame(width: 20.0, height: 40)
                             .scaleEffect(1.1)
                         Text("Dilution Calculator")
                     }
@@ -59,9 +59,9 @@ struct HomeView: View {
                 NavigationLink(destination: IsoToElView()) {
                     HStack {
                         Image(systemName: "rectangle.and.pencil.and.ellipsis")
-                            .frame(height: 40)
-                            .scaleEffect(1.1)
-                        Text("Determine Element from Isotopes")
+                            .frame(width: 20.0, height: 40)
+                            .scaleEffect(1.0)
+                        Text("Element from Isotopes")
                     }
                 }
                 

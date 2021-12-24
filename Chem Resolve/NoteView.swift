@@ -17,7 +17,7 @@ struct NoteView: View {
                     NavigationLink(destination: MatterView()) {
                         HStack {
                             Image(systemName: "scalemass")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Properties of Matter")
                         }
@@ -26,7 +26,7 @@ struct NoteView: View {
                     NavigationLink(destination: MixtureView()) {
                         HStack {
                             Image(systemName: "hourglass.tophalf.filled")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Mixtures and Solutions")
                         }
@@ -39,7 +39,7 @@ struct NoteView: View {
                     NavigationLink(destination: TheMoleView()) {
                         HStack {
                             Image(systemName: "circle.hexagongrid.circle")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("The Mole & Composition")
                         }
@@ -48,7 +48,7 @@ struct NoteView: View {
                     NavigationLink(destination: NucleusView()) {
                         HStack {
                             Image(systemName: "atom")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("The Atom & the Nucleus")
                         }
@@ -61,7 +61,7 @@ struct NoteView: View {
                     NavigationLink(destination: ElectronView()) {
                         HStack {
                             Image(systemName: "minus.circle")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Electrons")
                         }
@@ -70,7 +70,7 @@ struct NoteView: View {
                     NavigationLink(destination: PeriodicTableView()) {
                         HStack {
                             Image(systemName: "tablecells")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("The Periodic Table")
                         }
@@ -83,7 +83,7 @@ struct NoteView: View {
                     NavigationLink(destination: IonsView()) {
                         HStack {
                             Image(systemName: "plus.forwardslash.minus")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Ions")
                         }
@@ -92,7 +92,7 @@ struct NoteView: View {
                     NavigationLink(destination: PrecipitationView()) {
                         HStack {
                             Image(systemName: "cloud.rain.fill")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Precipitation Reactions")
                         }
@@ -105,7 +105,7 @@ struct NoteView: View {
                     NavigationLink(destination: CompoundsView()) {
                         HStack {
                             Image(systemName: "aqi.medium")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Compounds and Molecules")
                         }
@@ -114,8 +114,8 @@ struct NoteView: View {
                     NavigationLink(destination: ChemNomenclatureView()) {
                         HStack {
                             Image(systemName: "textformat.abc")
-                                .frame(height: 40)
-                                .scaleEffect(1.1)
+                                .frame(width: 20.0, height: 40)
+                                .scaleEffect(1.0)
                             Text("Chemical Nomenclature")
                         }
                     }
@@ -127,7 +127,7 @@ struct NoteView: View {
                     NavigationLink(destination: PeriodicityView()) {
                         HStack {
                             Image(systemName: "lines.measurement.horizontal")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Periodicity")
                         }
@@ -136,7 +136,7 @@ struct NoteView: View {
                     NavigationLink(destination: IonNAffinityView()) {
                         HStack {
                             Image(systemName: "tray.and.arrow.up")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Ionization and Electron Affinity")
                         }
@@ -149,7 +149,7 @@ struct NoteView: View {
                     NavigationLink(destination: ElectromagnetView()) {
                         HStack {
                             Image(systemName: "bolt.circle")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Electromagnetism")
                         }
@@ -158,7 +158,7 @@ struct NoteView: View {
                     NavigationLink(destination: SpectraView()) {
                         HStack {
                             Image(systemName: "sunrise.fill")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Atomic Spectra")
                         }
@@ -171,7 +171,7 @@ struct NoteView: View {
                     NavigationLink(destination: QTheoryView()) {
                         HStack {
                             Image(systemName: "circle.grid.cross")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Quantum Theory")
                         }
@@ -180,7 +180,7 @@ struct NoteView: View {
                     NavigationLink(destination: WaveParticleView()) {
                         HStack {
                             Image(systemName: "dot.radiowaves.right")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Wave-Particle Duality")
                         }
@@ -193,7 +193,7 @@ struct NoteView: View {
                     NavigationLink(destination: WaveNNodeView()) {
                         HStack {
                             Image(systemName: "waveform.and.magnifyingglass")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("The Wave-Function and Nodes")
                         }
@@ -202,7 +202,7 @@ struct NoteView: View {
                     NavigationLink(destination: QuantaNumView()) {
                         HStack {
                             Image(systemName: "123.rectangle")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Quantum Numbers")
                         }
@@ -211,7 +211,7 @@ struct NoteView: View {
                     NavigationLink(destination: ElConfigNoteView()) {
                         HStack {
                             Image(systemName: "rectangle.and.pencil.and.ellipsis")
-                                .frame(height: 40)
+                                .frame(width: 20.0, height: 40)
                                 .scaleEffect(1.1)
                             Text("Electron Configuration")
                         }

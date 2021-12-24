@@ -16,50 +16,61 @@ struct ExtraView: View {
                         
                         NavigationLink(destination: AboutView()) {
                             Text("About Me and Contact")
+                                .padding(.vertical, 4.5)
                         }
                         
                         NavigationLink(destination: ElConfigSearchView()) {
                             Text("Electron Trends Searcher")
+                                .padding(.vertical, 4.5)
                         }
                         
                         NavigationLink(destination: ElementInfoView()) {
                             Text("Element Info Searcher")
-                        }
-                        
-                        NavigationLink(destination: MiniPeriodView()) {
-                            Text("Minimalist Periodic Table Background")
+                                .padding(.vertical, 4.5)
                         }
                         
                         Group {
                             
                             NavigationLink(destination: OrbitalTableView()) {
                                 Text("Single Electron Orbital Graph")
+                                    .padding(.vertical, 4.5)
                             }
                             
                             NavigationLink(destination: RadiiView()) {
                                 Text("Atomic Radii Graphic")
+                                    .padding(.vertical, 4.5)
                             }
                             
                             NavigationLink(destination: IonRadiiView()) {
                                 Text("Ionic Radii Graphic")
+                                    .padding(.vertical, 4.5)
                             }
                             
                             NavigationLink(destination: CommonIonView()) {
                                 Text("Common Ions Nomeclature")
+                                    .padding(.vertical, 4.5)
                             }
                             
                             NavigationLink(destination: SolubilityView()) {
                                 Text("Solubility table")
+                                    .padding(.vertical, 4.5)
                             }
                             
                             NavigationLink(destination: LewisView()) {
                                 Text("Lewis Structure and VSERP Table")
+                                    .padding(.vertical, 4.5)
                             }
                             
                         }
                         
+                        NavigationLink(destination: MiniPeriodView()) {
+                            Text("Minimalist Periodic Table")
+                                .padding(.vertical, 4.5)
+                        }
+                        
                         NavigationLink(destination: JavaliteView()) {
                             Text("Self-Written Chemistry Articles")
+                                .padding(.vertical, 4.5)
                         }
                         
                     }

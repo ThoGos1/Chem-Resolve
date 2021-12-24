@@ -73,7 +73,7 @@ struct ElConfigSearchView: View {
                 GroupBox {
                     
                     Group {
-                        Text("Atomic Number (# Protons/Electrons):")
+                        Text("Number of Electrons:")
                             .fontWeight(.semibold)
                         Text(getAnum(Z: element, Zlist: elementnamelist, Llist: longelementnamelist))
                             .padding(.bottom, 25.0)

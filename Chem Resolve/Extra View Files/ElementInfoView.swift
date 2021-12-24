@@ -53,7 +53,7 @@ struct ElementInfoView: View {
                 GroupBox {
                     
                     Group {
-                        Text("Atomic Number (# Protons/Electrons):")
+                        Text("Atomic Number:")
                             .fontWeight(.semibold)
                         Text(getAnum(Z: element, Zlist: elementnamelist, Llist: longelementnamelist))
                             .padding(.bottom, 25.0)
@@ -65,6 +65,7 @@ struct ElementInfoView: View {
                             .fontWeight(.semibold)
                         Text(elseries(Z: element, Nlist: elementnamelist, LZlist: longelementnamelist))
                             .padding(.bottom, 25.0)
+                            .frame(width: 300.0, height: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/)
                     }
                     
                     

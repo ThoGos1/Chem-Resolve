@@ -15,8 +15,8 @@ struct SpectraView: View {
 
                 Text("Atomic Spectra").font(.title).fontWeight(.bold).padding(.top, -10.0)
                 
-                Text("When an electric current passes through a gas, the gas emits light, as exited electrons are separated with the atom, and then they recombine and emit a photon.")
-                    .fontWeight(.medium)
+                Text("When an electric current passes through a gas, the gas emits light, as excited electrons are separated from the atom, and then they recombine and emit a photon.")
+                    .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 20.0)
                     .padding(/*@START_MENU_TOKEN@*/.top, -10.0/*@END_MENU_TOKEN@*/)
@@ -45,6 +45,7 @@ struct SpectraView: View {
                     Text("The Balmer Series consists of the 4 wavelengths at which Hydrogens emitted light is visible.\n656 nm, 486 nm, 434 nm, and 410 nm.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -11)
                 }
                 
                 GroupBox(label : Text("Lyman Series:")
@@ -52,6 +53,7 @@ struct SpectraView: View {
                     Text("The Lyman Series consists of the 3 wavelengths at which Hydrogens emitted light is ultraviolet.\n121 nm, 102 nm, and 97 nm.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -13)
                 }
                 
                 Spacer()

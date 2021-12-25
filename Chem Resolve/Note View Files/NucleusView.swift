@@ -27,6 +27,7 @@ struct NucleusView: View {
                     Text("A collection of only the same atom, like H2, O2, N2, F2, Cl2, Br2, and I2.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -12)
                 }
                 
                 GroupBox(label : Text("The Nucleus:")
@@ -34,6 +35,7 @@ struct NucleusView: View {
                     Text("The center of the atom made up of Protons (+) and Neutrons (0). This is what decides the mass of the atom.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -7)
                 }
                 
                 GroupBox(label : Text("Subatomic particles:")
@@ -41,6 +43,7 @@ struct NucleusView: View {
                     Text("Particles that make up the atom, like the protons, neutrons, electrons, and quarks.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -5)
                 }
                 
                 GroupBox(label : Text("Atomic Number:")
@@ -48,6 +51,7 @@ struct NucleusView: View {
                     Text("Amount of protons in the atom, and usually the amount of electrons too, because '+' + '-' = 0.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -10)
                 }
                 
                 GroupBox(label : Text("Isotope:")
@@ -55,6 +59,7 @@ struct NucleusView: View {
                     Text("An Atom that has the same amount of protons, but different number of neutrons.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -2)
                 }
                 
                 GroupBox(label : Text("Atomic Mass:")
@@ -62,6 +67,7 @@ struct NucleusView: View {
                     Text("The average of the mass of protons and neutrons from the atom, considering the percent abundance of the different isotopes.\nAvg Mass = (% ∗ mass1) + (% ∗ mass2)")
                         .padding(.top, -5.0)
                         .padding(.bottom, 20.0)
+                        .offset(x: -2)
                 }
                 Spacer()
             }

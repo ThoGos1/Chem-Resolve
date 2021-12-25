@@ -20,6 +20,7 @@ struct ElConfigNoteView: View {
                             .fontWeight(.bold)) {
                     Text("Letter is l-value.\nThe first number is n-value.\nThe exponent is the number of electrons.")
                         .padding(.top, -5.0)
+                        .offset(x: -38)
                     Image("configpic")
                         .scaleEffect(0.47)                        .frame(width: 150.0, height: 110.0)
                         .cornerRadius(10)
@@ -32,6 +33,7 @@ struct ElConfigNoteView: View {
                     Text("Each row is the 'n-value' for s and p.\nFor d the 'n-value' is row-1\nFor f the 'n-value' is row-2")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -7)
                 }
                 
                 GroupBox(label : Text("Metal Exceptions:")
@@ -39,6 +41,7 @@ struct ElConfigNoteView: View {
                     Text("d^4 metals actually always go to d^5\nd^9 metals always go to d^10\nThis is because energy from the 4s orbital gives an electron to them, with just a tiny amount of energy needed.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -2)
                 }
                 
                 GroupBox(label : Text("Hund's Rule:")

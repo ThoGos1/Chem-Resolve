@@ -21,6 +21,7 @@ struct IonsView: View {
                     Text("An atom that loses or gain an atom to achieve octet or duplet, so it can be more stable.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -5)
                 }
                 
                 GroupBox(label : Text("Cations & Anions:")
@@ -28,6 +29,7 @@ struct IonsView: View {
                     Text("A cation loses electrons, so they are positive and smaller than the original atom.\nWhereas an anion gains electrons, so they are negative and larger than the original atom.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -4)
                 }
                 
                 GroupBox(label : Text("Monatomic Ion:")
@@ -35,6 +37,7 @@ struct IonsView: View {
                     Text("A single atom turning into an ion, Ex. Na+ or Cl-")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -5)
                 }
                 
                 GroupBox(label : Text("Polyatomic Ion:")
@@ -42,6 +45,7 @@ struct IonsView: View {
                     Text("An ion made up of multiple atoms that are bonded together by covalent bonds, Ex. SO4-")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -1)
                 }
                 
                 GroupBox(label : Text("Isoelectric:")
@@ -49,6 +53,7 @@ struct IonsView: View {
                     Text("An atom has the same amount of electrons as another, usually ions get the same as noble gases.\nEx. Na = 1s1 2s2 2p6 3s1\nSo if it loses the 3s1 it will become Neon.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -6)
                 }
                 
                 GroupBox(label : Text("Ion Nomenclature:")

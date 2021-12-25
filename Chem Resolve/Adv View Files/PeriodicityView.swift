@@ -27,6 +27,7 @@ struct PeriodicityView: View {
                     Text("The attraction force from the nucleus, proportional to the amount of protons in the nucleus.\nS < p < d < f < g < h\nWith the same n-value.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -2)
                 }
                 
                 GroupBox(label : Text("Atomic Radius:")
@@ -34,6 +35,7 @@ struct PeriodicityView: View {
                     Text("Defined as half of the distance between two of the elements atoms.\nThis DECREASES from Left -> Right, because protons are pulling electrons in TIGHTER\nThis INCREASES from Top -> Bottom, because more and more SHELLS are added")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -2)
                 }
                 
                 GroupBox(label : Text("Ionic Radius:")

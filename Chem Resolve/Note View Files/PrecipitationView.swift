@@ -20,6 +20,7 @@ struct PrecipitationView: View {
                     Text("When a solvent and solute touch and react so fast that the solute turns into powder of crystals.\nIons in an aqueous solution produce a solid.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -3)
                 }
                 
                 GroupBox(label : Text("Soluble/Insoluble:")
@@ -27,6 +28,7 @@ struct PrecipitationView: View {
                     Text("Soluble substances dissolve in solutions as a physical change, and insoluble substances do not.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -11)
                 }
                 
                 GroupBox(label : Text("Electrolyte:")
@@ -34,6 +36,7 @@ struct PrecipitationView: View {
                     Text("A substance that breaks apart into ions in solutions, like NaCl, making them more stable, as water surrounds the ions.\nA strong electrolyte COMPLETETLY breaks apart.\nA weak electrolyte mostly stays together.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -1)
                 }
                 
                 GroupBox(label : Text("Temperature in Solutions:")
@@ -55,6 +58,7 @@ struct PrecipitationView: View {
                     Text("When an ion doesn't react in the equation, so it is just the same on the left side as the right side.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -5)
                 }
                 
                 Spacer()

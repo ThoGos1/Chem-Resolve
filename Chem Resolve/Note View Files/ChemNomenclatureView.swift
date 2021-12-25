@@ -15,11 +15,12 @@ struct ChemNomenclatureView: View {
                 
                 Text("Chemical Nomeclature").font(.title).fontWeight(.bold).padding(.top, -10.0)
                 
-                GroupBox(label : Text("Nomeclature for covalent compounds:")
+                GroupBox(label : Text("Covalent Compound Nomenclature:")
                             .fontWeight(.bold)) {
                     Text("The non-metals are written in the following order:\nB     Si     C     As     P     N     H     Te     Se     S     O     At     I     Br     Cl     F\nThat's why water is H2O and not OH2.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -4)
                 }
                 
                 GroupBox(label : Text("Numeric Prefixes:")

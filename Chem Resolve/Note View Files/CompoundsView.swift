@@ -13,13 +13,14 @@ struct CompoundsView: View {
         ScrollView(showsIndicators: false) {
             VStack {
                 
-                Text("Compounds & Molecules:").font(.title).fontWeight(.bold).padding(.top, -10.0)
+                Text("Compounds/Molecules:").font(.title).fontWeight(.bold).padding(.top, -10.0)
                 
                 GroupBox(label : Text("Compounds vs Molecules:")
                             .fontWeight(.bold)) {
                     Text("A compound is a substance made of two or more DIFFERENT elements.\nA molecule is a substance made of two or more DIFFERENT or SAME elements.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -6)
                 }
                 
                 GroupBox(label : Text("Covalent Bond:")
@@ -48,6 +49,7 @@ struct CompoundsView: View {
                     Text("A cation gives an electron to an anion, which greates a VERY strong bond between the two ions, usually forming crystal lattices.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -2)
                 }
                 
                 Spacer()

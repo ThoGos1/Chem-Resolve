@@ -21,6 +21,7 @@ struct QuantaNumView: View {
                     Text("There are 3 quantum numbers that determines the electron configuration of atoms.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -2)
                 }
                 
                 GroupBox(label : Text("Principal Quantum Number (n):")
@@ -28,13 +29,17 @@ struct QuantaNumView: View {
                     Text("The HIGHER the n-value the further away it is from the nucleus, until it's free at 'infinity'.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -10)
                 }
                 
-                GroupBox(label : Text("Orbital Angular Momentum Quantum Number (l):")
-                            .fontWeight(.bold)) {
+                GroupBox(label : Text("Angular Momentum Quantum Number (l):")
+                            .fontWeight(.bold)
+                            ) {
                     Text("The l-value is related to the shape of the orbital.\nl = 0, 1, 2, 3 … n-1")
+                        .offset(x: -6)
+                        .padding(.top, -5.0)
                     Image("orbital")
-                        .scaleEffect(0.47)                        .frame(width: 320.0, height: 120.0)
+                        .scaleEffect(0.42)                        .frame(width: 290.0, height: 108.0)
                         .cornerRadius(10)
                         .overlay(RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 3))
@@ -45,6 +50,7 @@ struct QuantaNumView: View {
                     Text("The description of the shape, like its orientation and position.\nRange = -l to +l")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -9)
                 }
                 
                 GroupBox(label : Text("Electron Spin (ms):")
@@ -52,6 +58,7 @@ struct QuantaNumView: View {
                     Text("Two electrons can have the same n, l, ml, but different spins.\nEither 0.5 or -0.5")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -3)
                 }
                 
                 Spacer()

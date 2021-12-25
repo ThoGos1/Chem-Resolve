@@ -21,6 +21,7 @@ struct IonNAffinityView: View {
                     Text("The minimum amount of energy needed to remove an electron from an atom in gas phase.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -1)
                 }
                 
                 GroupBox(label : Text("Largest Magnitude of Energy Found:")
@@ -28,6 +29,7 @@ struct IonNAffinityView: View {
                     Text("When you are trying to remove core electrons instead of valence electrons.\nSo the BIGGEST change in energy is equal to the amount of valence electrons of the atom.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -1)
                 }
                 
                 GroupBox(label : Text("First Ionization Energy:")
@@ -35,6 +37,7 @@ struct IonNAffinityView: View {
                     Text("The minimum energy needed to REMOVE the first electron from a neutral atom.\nIt's easier to remove an electron from an orbital with two electrons, which is why the ionization energy is higher in Nitrogen than Oxygen.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -4)
                 }
                 
                 GroupBox(label : Text("Second Ionization Energy:")
@@ -49,6 +52,7 @@ struct IonNAffinityView: View {
                     Text("How much energy is released after an electron is added to the atom, and if it's negative that means that energy is needed to add an electron.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -1)
                 }
                 
                 Spacer()

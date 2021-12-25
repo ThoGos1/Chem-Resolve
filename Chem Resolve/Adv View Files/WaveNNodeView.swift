@@ -27,6 +27,7 @@ struct WaveNNodeView: View {
                     Text("Schrodinger's equation SQUARED.\nThe probability that an electron will be found in a small region of volume.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -1)
                 }
                 
                 GroupBox(label : Text("Node:")
@@ -54,6 +55,7 @@ struct WaveNNodeView: View {
                     Text("Energy is negative because, it's compared to the energy of a free electron. This means how much ENERGY is needed to POP-OFF an electron.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -13)
                 }
                 
                 

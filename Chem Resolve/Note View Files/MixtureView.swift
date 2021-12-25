@@ -20,6 +20,8 @@ struct MixtureView: View {
                     Text("A mix of two substances like salt and water, or the air in the atmosphere\nA mixture is a PHYSICAL change, and can be undone physically.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -3)
+
                 }
                 
                 GroupBox(label : Text("Heterogeneous Mixture:")
@@ -27,6 +29,7 @@ struct MixtureView: View {
                     Text("Two different substances combined, like salt & water. The components are big enough to separate them.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -4)
                 }
                 
                 GroupBox(label : Text("Homogeneous Mixtures AKA Solutions:")
@@ -34,6 +37,8 @@ struct MixtureView: View {
                     Text("One or more substances dissolved together into one mixture.\nGaseous mixtures DON'T really count here\nThe molecules are so well mixed that you can't see separate components, AKA Uniform.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -6)
+                    
                 }
                 
                 GroupBox(label : Text("Solvent:")
@@ -41,6 +46,7 @@ struct MixtureView: View {
                     Text("The dominant substance that the solutes mix with. So it's what you add something to, like salt to water to make a solution.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -4)
                 }
                 
                 GroupBox(label : Text("Solute:")
@@ -48,6 +54,7 @@ struct MixtureView: View {
                     Text("The stuff added that then mix with the solvent. So it's what you add to something like water to make a solution.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -2)
                 }
                 
                 GroupBox(label : Text("Crystallization:")
@@ -55,6 +62,7 @@ struct MixtureView: View {
                     Text("When the solute comes out of the solvent as crystals, like salt in water, after evaporation.")
                         .padding(.top, -5.0)
                         .padding(.bottom, 20.0)
+                        .offset(x: -10)
                 }
                 
                 

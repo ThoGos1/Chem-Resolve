@@ -20,6 +20,7 @@ struct PeriodicTableView: View {
                     Text("Each element in the same period has the same amount of electron shells, ranging from 1 to 7.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -6)
                 }
                 
                 GroupBox(label : Text("Groups in Periodic Table:")
@@ -41,6 +42,7 @@ struct PeriodicTableView: View {
                     Text("The elements in the middle of the periodic table, and they are harder to predict, as they can have different charges and electron configurations.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -5)
                 }
                 
                 GroupBox(label : Text("Lanthanoids and Actinoids:")
@@ -48,6 +50,7 @@ struct PeriodicTableView: View {
                     Text("The elements that are outside the periodic table. They are all radioactive & have different charges.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .offset(x: -2)
                 }
                 
                 GroupBox(label : Text("Metals vs Metalloids vs Nonmetals:")

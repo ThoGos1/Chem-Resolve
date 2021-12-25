@@ -23,7 +23,7 @@ struct ContentView: View {
             NoteView()
                 .tabItem {
                     Image(systemName: "note.text")
-                    Text("Chem Notes")
+                    Text("Notes")
                 }
             
             HomeView()

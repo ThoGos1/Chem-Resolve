@@ -92,10 +92,10 @@ struct AboutView: View {
                 
                 Text("About Me").font(.title).fontWeight(.bold).padding(.top, -10.0).padding(.bottom)
                 
-                Text("Thank you for using Chem Resolve, every download is appreciated greatly.\nChem Resolve is developed my me, ThoGos.\nI'm a first-generation college student at UC San Diego.\nI made this app to help college students like myself, that would rather focus learning and analysis and less on busy work.")
+                Text("Thank you for using Chem Resolve, every download is appreciated greatly.\nChem Resolve is developed by me, ThoGos.\nI'm a first-generation college student at UC San Diego.\nI made this app to help college students like myself, that would rather focus on learning & analysis and less on busy work.")
                     .padding(.horizontal, 20).lineSpacing(8).padding(.bottom, 15.0)
                 
-                Text("Chem Resolve is always trying to improve, and it was made to help students like myself.\nSo feel free to contact me with suggestions of new additions, like new solvers.\n\nMy Email address is: javalite@javalite.com")
+                Text("Chem Resolve is always trying to improve, so feel free to contact me with suggestions of new additions.\n\nMy Email address is: javalite@javalite.com")
                     .padding(.horizontal, 20).lineSpacing(8)
                 
                 Spacer()
@@ -123,7 +123,6 @@ struct OrbitalTableView: View {
             Image("orbitalgraph")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
-                .offset(x: -3, y: 0)
         }
     }
 }
@@ -135,7 +134,6 @@ struct RadiiView: View {
             Image("atomradii")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
-                .offset(x: -9, y: 0)
         }
     }
 }
@@ -147,7 +145,6 @@ struct IonRadiiView: View {
             Image("ionradii")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
-                .offset(x: -9, y: 0)
         }
     }
 }
@@ -159,7 +156,6 @@ struct CommonIonView: View {
             Image("comion")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
-                .offset(x: -9, y: 0)
         }
     }
 }
@@ -171,7 +167,6 @@ struct SolubilityView: View {
             Image("soluble")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
-                .offset(x: -9, y: 0)
         }
     }
 }
@@ -183,7 +178,6 @@ struct LewisView: View {
             Image("lewis")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
-                .offset(x: -3, y: 0)
         }
     }
 }
@@ -219,6 +213,5 @@ struct ExtraView_Previews: PreviewProvider {
             ExtraView()
                 
         }
-                
     }
 }

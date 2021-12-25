@@ -53,7 +53,7 @@ struct IsoToElView: View {
                             Text(getWhich(one: goramu))
                         }
                         .padding(/*@START_MENU_TOKEN@*/.horizontal, 50.0/*@END_MENU_TOKEN@*/)
-                        .frame(width: 315.0, height: 50.0)
+                        .frame(width: 300.0, height: 50.0)
                     }
                     
                 }
@@ -62,7 +62,7 @@ struct IsoToElView: View {
                 GroupBox {
                     
                     Group {
-                        Text("Enter Isotope Weight and Percentage 1:")
+                        Text("Enter Isotope Weight and Percent 1:")
                             .fontWeight(.semibold)
                             .padding(.bottom, -8.0)
                         
@@ -84,7 +84,7 @@ struct IsoToElView: View {
                     }
                     
                     Group {
-                        Text("Enter Isotope Weight and Percentage 2:")
+                        Text("Enter Isotope Weight and Percent 2:")
                             .fontWeight(.semibold)
                             .padding(.bottom, -8.0)
                         
@@ -107,7 +107,7 @@ struct IsoToElView: View {
                     }
                     
                     Group {
-                        Text("Enter Isotope Weight and Percentage 3:")
+                        Text("Enter Isotope Weight and Percent 3:")
                             .fontWeight(.semibold)
                             .padding(.bottom, -8.0)
                             

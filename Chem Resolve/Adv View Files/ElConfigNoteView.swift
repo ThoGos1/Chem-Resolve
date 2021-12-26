@@ -18,11 +18,11 @@ struct ElConfigNoteView: View {
                 
                 GroupBox(label : Text("Quantum Numbers in electron configuration:")
                             .fontWeight(.bold)) {
-                    Text("Letter is l-value.\nThe first number is n-value.\nThe exponent is the number of electrons.")
+                    Text("The first number is the n-value.\nThe letter 's' is the L-value.\nThe exponent is the number of electrons in the oribital.")
                         .padding(.top, -5.0)
-                        .offset(x: -38)
+                        .offset(x: -30)
                     Image("configpic")
-                        .scaleEffect(0.47)                        .frame(width: 150.0, height: 110.0)
+                        .scaleEffect(0.7)                        .frame(width: 120.0, height: 110.0)
                         .cornerRadius(10)
                         .overlay(RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 3))
@@ -38,7 +38,7 @@ struct ElConfigNoteView: View {
                 
                 GroupBox(label : Text("Metal Exceptions:")
                             .fontWeight(.bold)) {
-                    Text("d^4 metals actually always go to d^5\nd^9 metals always go to d^10\nThis is because energy from the 4s orbital gives an electron to them, with just a tiny amount of energy needed.")
+                    Text("d^4 Metals actually always go to d^5\nd^9 Metals always go to d^10\nThis is because energy from the 4s orbital gives an electron to them, with just a tiny amount of energy needed.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
                         .offset(x: -2)

@@ -27,12 +27,11 @@ struct AboutView: View {
                 GroupBox(label : Text("Feedback:")
                             .fontWeight(.bold)) {
                     
-                    Text("If you have any suggestions for new additions.\nMy Email address is: javalite@javalite.com")
+                    Text("If you have any suggestions or general feedback, feel free to email me.\nMy Email address is: javalite@javalite.com")
                         .lineSpacing(8).padding(.bottom, 15.0)
-                        .frame(width: 320.0)
+                        .frame(width: 300.0)
                         .padding(.top, -5.0)
-
-                    
+                        .offset(x: -1)
                 }
                 
                 GroupBox(label : Text("Support Me:")
@@ -40,7 +39,7 @@ struct AboutView: View {
                     
                     Text("If you have enjoyed the features of Chem Resolve and you have some spare cash, a donation would be greatly appreciated and helps keep this app on the App Store.")
                         .lineSpacing(8)
-                        .frame(width: 320.0)
+                        .frame(width: 300.0)
                         .padding(.top, -5.0)
                     Text("(Tap and Hold to Copy)")
                         .multilineTextAlignment(.center)

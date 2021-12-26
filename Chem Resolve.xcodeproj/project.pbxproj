@@ -31,6 +31,7 @@
 		8B362CB9277050CF00391E31 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B362CB8277050CF00391E31 /* WebView.swift */; };
 		8B539A3C276DBB1C001CE4A9 /* EmpirePercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539A3B276DBB1C001CE4A9 /* EmpirePercentView.swift */; };
 		8B539A40276F05BE001CE4A9 /* AdvCHOCombustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539A3F276F05BE001CE4A9 /* AdvCHOCombustView.swift */; };
+		8BB286012778000C0060E31F /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB286002778000C0060E31F /* AboutView.swift */; };
 		8BDDD214274C7BA0001ED29E /* BondCharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDD213274C7BA0001ED29E /* BondCharView.swift */; };
 		8BDDD216274D96CA001ED29E /* DilutionSolveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDD215274D96CA001ED29E /* DilutionSolveView.swift */; };
 		8BDDD21827670F99001ED29E /* CHCombustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDDD21727670F99001ED29E /* CHCombustView.swift */; };
@@ -69,6 +70,7 @@
 		8B362CB8277050CF00391E31 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		8B539A3B276DBB1C001CE4A9 /* EmpirePercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpirePercentView.swift; sourceTree = "<group>"; };
 		8B539A3F276F05BE001CE4A9 /* AdvCHOCombustView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvCHOCombustView.swift; sourceTree = "<group>"; };
+		8BB286002778000C0060E31F /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		8BDDD213274C7BA0001ED29E /* BondCharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BondCharView.swift; sourceTree = "<group>"; };
 		8BDDD215274D96CA001ED29E /* DilutionSolveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DilutionSolveView.swift; sourceTree = "<group>"; };
 		8BDDD21727670F99001ED29E /* CHCombustView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHCombustView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				8B362CB8277050CF00391E31 /* WebView.swift */,
 				8B1B23FB2734BB3A002CC0AB /* ElConfigSearchView.swift */,
 				8B029319273CF89100D91B92 /* ElementInfoView.swift */,
+				8BB286002778000C0060E31F /* AboutView.swift */,
 			);
 			path = "Extra View Files";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				8B029333273F920000D91B92 /* SpectraView.swift in Sources */,
 				8B029335273F9DF800D91B92 /* QTheoryView.swift in Sources */,
+				8BB286012778000C0060E31F /* AboutView.swift in Sources */,
 				8B029341273FBE5F00D91B92 /* IonNAffinityView.swift in Sources */,
 				8B02932E273F88AD00D91B92 /* ChemNomenclatureView.swift in Sources */,
 				8B02933F273FBBDC00D91B92 /* PeriodicityView.swift in Sources */,

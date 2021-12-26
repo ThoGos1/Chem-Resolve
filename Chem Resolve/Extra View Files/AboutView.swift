@@ -18,7 +18,7 @@ struct AboutView: View {
                 
                 GroupBox {
                     
-                    Text("Thank you for using Chem Resolve.\nChem Resolve has been developed by me, ThoGos.\nI'm a first-generation college student at University of California - San Diego.\nI made this app to help college students like myself, that would rather focus on learning & analysis and less on busy work.")
+                    Text("Thank you for using Chem Resolve.\nChem Resolve has been developed by me, ThoGos.\nI'm a first-generation college student at University of California - San Diego.\nI made this app to help college students like myself, that would rather focus on learning & analysis, rather than busy work.")
                         .lineSpacing(8).padding(.bottom, 15.0)
 
                     

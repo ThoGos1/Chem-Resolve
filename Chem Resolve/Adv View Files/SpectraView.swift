@@ -26,6 +26,8 @@ struct SpectraView: View {
                     Text("Lines in a spectrum for all the different light that Hydrogen atoms can emit.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Frequency of light between two lines:")
@@ -38,6 +40,8 @@ struct SpectraView: View {
                             .stroke(Color.black, lineWidth: 3))
                     Text("R = 3.29∗10^15 Hz.\nThe frequency can be used to find the wavelength, which can be used to determine which color is emitted from the electron.")
                         .padding(.bottom, 20.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Balmer Series:")
@@ -45,7 +49,7 @@ struct SpectraView: View {
                     Text("The Balmer Series consists of the 4 wavelengths at which Hydrogens emitted light is visible.\n656 nm, 486 nm, 434 nm, and 410 nm.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -11)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Lyman Series:")
@@ -53,7 +57,7 @@ struct SpectraView: View {
                     Text("The Lyman Series consists of the 3 wavelengths at which Hydrogens emitted light is ultraviolet.\n121 nm, 102 nm, and 97 nm.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -13)
+                        .multilineTextAlignment(.center)
                 }
                 
                 Spacer()

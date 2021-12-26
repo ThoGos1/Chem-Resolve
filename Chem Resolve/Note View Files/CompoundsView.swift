@@ -20,7 +20,7 @@ struct CompoundsView: View {
                     Text("A compound is a substance made of two or more DIFFERENT elements.\nA molecule is a substance made of two or more DIFFERENT or SAME elements.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -6)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Covalent Bond:")
@@ -28,6 +28,8 @@ struct CompoundsView: View {
                     Text("When two nonmetals share valence electrons to achieve octet or duplet, to become more stable. Multiple covalent bonds can be created at the same time, which makes the bond stronger.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Electronegativity:")
@@ -35,6 +37,8 @@ struct CompoundsView: View {
                     Text("A scale from 0 to 4, stating how 'desperate' an atom is to form a bond, generally increasing when going to the right on the periodic table.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Polarity:")
@@ -42,6 +46,8 @@ struct CompoundsView: View {
                     Text("The difference in electronegativity of two atoms determines the compounds polarity.\nDifferences lower than 0.5 are nonpolar, differences between 0.5 and 2.0 are generally polar, and differences over 2.0 are ionic.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Ionic Compounds:")
@@ -49,7 +55,7 @@ struct CompoundsView: View {
                     Text("A cation gives an electron to an anion, which greates a VERY strong bond between the two ions, usually forming crystal lattices.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -2)
+                        .multilineTextAlignment(.center)
                 }
                 
                 Spacer()

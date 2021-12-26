@@ -20,7 +20,7 @@ struct ElConfigNoteView: View {
                             .fontWeight(.bold)) {
                     Text("The first number is the n-value.\nThe letter 's' is the L-value.\nThe exponent is the number of electrons in the oribital.")
                         .padding(.top, -5.0)
-                        .offset(x: -30)
+                        .multilineTextAlignment(.center)
                     Image("configpic")
                         .scaleEffect(0.7)                        .frame(width: 120.0, height: 110.0)
                         .cornerRadius(10)
@@ -33,7 +33,7 @@ struct ElConfigNoteView: View {
                     Text("Each row is the 'n-value' for s and p.\nFor d the 'n-value' is row-1\nFor f the 'n-value' is row-2")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -7)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Metal Exceptions:")
@@ -41,7 +41,7 @@ struct ElConfigNoteView: View {
                     Text("d^4 Metals actually always go to d^5\nd^9 Metals always go to d^10\nThis is because energy from the 4s orbital gives an electron to them, with just a tiny amount of energy needed.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -2)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Hund's Rule:")
@@ -49,6 +49,8 @@ struct ElConfigNoteView: View {
                     Text("As electrons are added to an atom, they go to each orbital alone, and then when each orbital has ONE electron, then electrons are added randomly to the orbitals to make them 'full'.\nThe first electron will always be +0.5 spin.\nKinda like Kalaha game.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 Spacer()

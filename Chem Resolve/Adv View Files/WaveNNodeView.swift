@@ -20,6 +20,8 @@ struct WaveNNodeView: View {
                     Text("A function for the trajectory of light as a wave, also know as Schrodinger's equation.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Probability Density:")
@@ -28,6 +30,8 @@ struct WaveNNodeView: View {
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
                         .offset(x: -1)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Node:")
@@ -35,6 +39,8 @@ struct WaveNNodeView: View {
                     Text("A location where the electron WON'T travel, aka the wavefunction = 0.\nAngular Nodes are the found between orbital lobels (l-value).\nRadial Nodes are between energy levels, as they can only be integers (n - 1 - l).")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Allowed energy for each level:")
@@ -48,6 +54,8 @@ struct WaveNNodeView: View {
                         
                     Text("The energy of any energy level 'n' can be found for any one-electron atom with atomic number 'Z'.")
                         .padding(.bottom, 20.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Why is energy NEGATIVE:")
@@ -55,7 +63,7 @@ struct WaveNNodeView: View {
                     Text("Energy is negative because, it's compared to the energy of a free electron. This means how much ENERGY is needed to POP-OFF an electron.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -13)
+                        .multilineTextAlignment(.center)
                 }
                 
                 

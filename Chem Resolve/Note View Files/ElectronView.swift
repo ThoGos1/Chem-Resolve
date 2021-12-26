@@ -20,6 +20,8 @@ struct ElectronView: View {
                     Text("The negative subatomic particle orbiting the nucleus giving the atom volume, and is responsible for how the atom interacts chemically.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Fundamental Charge:")
@@ -27,7 +29,7 @@ struct ElectronView: View {
                     Text("Amount of energy in one Electron, either in Coulomb or kilograms:\ne = 1.602∗10^(−19) C\nModern value (charge/mass):\n9.109∗10^(−31) kg")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -16)
+                        .multilineTextAlignment(.center)
                 }
                 
                 Text("The MORE energy the electron has, the further away from the nucleus it is.")
@@ -40,7 +42,7 @@ struct ElectronView: View {
                     Text("The outer most electrons.\nThese are the electrons that decide how the atom bonds with other atoms.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -2)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Core Electrons:")
@@ -48,6 +50,8 @@ struct ElectronView: View {
                     Text("The inner most electrons.\nCan also be seen as the noble gas that has the same electron configuration.")
                         .padding(.top, -5.0)
                         .padding(.bottom, 20.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 Spacer()

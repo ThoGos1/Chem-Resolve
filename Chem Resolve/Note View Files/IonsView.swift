@@ -21,7 +21,7 @@ struct IonsView: View {
                     Text("An atom that loses or gain an atom to achieve octet or duplet, so it can be more stable.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -5)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Cations & Anions:")
@@ -29,7 +29,7 @@ struct IonsView: View {
                     Text("A cation loses electrons, so they are positive and smaller than the original atom.\nWhereas an anion gains electrons, so they are negative and larger than the original atom.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -4)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Monatomic Ion:")
@@ -37,7 +37,7 @@ struct IonsView: View {
                     Text("A single atom turning into an ion, Ex. Na+ or Cl-")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -5)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Polyatomic Ion:")
@@ -45,7 +45,7 @@ struct IonsView: View {
                     Text("An ion made up of multiple atoms that are bonded together by covalent bonds, Ex. SO4-")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -1)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Isoelectric:")
@@ -53,7 +53,7 @@ struct IonsView: View {
                     Text("An atom has the same amount of electrons as another, usually ions get the same as noble gases.\nEx. Na = 1s1 2s2 2p6 3s1\nSo if it loses the 3s1 it will become Neon.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -6)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Ion Nomenclature:")
@@ -61,6 +61,7 @@ struct IonsView: View {
                     Text("For cations they keep their name but it has '-ion' added on the end, and if it's a transition metal it has the ion charge in parentheses, Ex. Iron (III).\nMonatomic anions just get the ending '-ide'.")
                         .padding(.top, -5.0)
                         .padding(.bottom, 20.0)
+                        .multilineTextAlignment(.center)
                 }
                 
                 Spacer()

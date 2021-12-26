@@ -21,7 +21,7 @@ struct QTheoryView: View {
                     Text("Planck's idea that energy exchange and radiation happens in packets of energy.\nPlanck derived it from the photoelectric effect.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -10)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Planck and Energy:")
@@ -29,6 +29,8 @@ struct QTheoryView: View {
                     Text("Planck's Constant (h) = 6.629e-34 J∗s\nEnergy = h∗frequency")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("The Photoelectric Effect:")
@@ -36,7 +38,7 @@ struct QTheoryView: View {
                     Text("Electrons are ejected from metals, if they are hit by UV radiation.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -8)
+                        .multilineTextAlignment(.center)
 
                 }
                 
@@ -45,7 +47,7 @@ struct QTheoryView: View {
                     Text("A packet of energy emitted from atoms, that can be visible light.\nLight is actually just a stream of photons.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -22)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("The Work Equation:")
@@ -53,7 +55,7 @@ struct QTheoryView: View {
                     Text("It states that a specific amount of energy is required for ejection. It also states that the difference between the energy supplied and the energy required is the kinetic energy of the electron ejected.\nThis means that at higher frequencies, the amount of electrons doesn't change, but the kinetic energy does.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: 1)
+                        .multilineTextAlignment(.center)
                 }
                 
                 Spacer()

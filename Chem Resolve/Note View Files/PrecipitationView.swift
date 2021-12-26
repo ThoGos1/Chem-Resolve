@@ -20,7 +20,7 @@ struct PrecipitationView: View {
                     Text("When a solvent and solute touch and react so fast that the solute turns into powder of crystals.\nIons in an aqueous solution produce a solid.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -3)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Soluble/Insoluble:")
@@ -28,7 +28,7 @@ struct PrecipitationView: View {
                     Text("Soluble substances dissolve in solutions as a physical change, and insoluble substances do not.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -11)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Electrolyte:")
@@ -36,7 +36,7 @@ struct PrecipitationView: View {
                     Text("A substance that breaks apart into ions in solutions, like NaCl, making them more stable, as water surrounds the ions.\nA strong electrolyte COMPLETETLY breaks apart.\nA weak electrolyte mostly stays together.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -1)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Temperature in Solutions:")
@@ -44,6 +44,8 @@ struct PrecipitationView: View {
                     Text("If the temperature increases, more solute can be dissolved, as the water and ions can move more freely, so the water can reach more ions.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Complete/Net Ionic Equations:")
@@ -51,6 +53,8 @@ struct PrecipitationView: View {
                     Text("A complete equation shows how every ion ionizes, whereas a net ionic equation only shows the solid.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Spectator Ion:")
@@ -58,7 +62,7 @@ struct PrecipitationView: View {
                     Text("When an ion doesn't react in the equation, so it is just the same on the left side as the right side.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -5)
+                        .multilineTextAlignment(.center)
                 }
                 
                 Spacer()

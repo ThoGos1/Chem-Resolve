@@ -20,7 +20,7 @@ struct PeriodicTableView: View {
                     Text("Each element in the same period has the same amount of electron shells, ranging from 1 to 7.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -6)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Groups in Periodic Table:")
@@ -28,6 +28,8 @@ struct PeriodicTableView: View {
                     Text("Each element in the same group has the same amount of valence electrons.\nAKA they have the same chemistry.\nMagnitude of reactions increase as you go DOWN")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Main Group Elements:")
@@ -35,6 +37,8 @@ struct PeriodicTableView: View {
                     Text("Elements in groups 1 through 8, and they are the most simple to predict, as they follow all the rules.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 GroupBox(label : Text("Transition Metals:")
@@ -42,7 +46,7 @@ struct PeriodicTableView: View {
                     Text("The elements in the middle of the periodic table, and they are harder to predict, as they can have different charges and electron configurations.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -5)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Lanthanoids and Actinoids:")
@@ -50,7 +54,7 @@ struct PeriodicTableView: View {
                     Text("The elements that are outside the periodic table. They are all radioactive & have different charges.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -2)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Metals vs Metalloids vs Nonmetals:")
@@ -58,6 +62,8 @@ struct PeriodicTableView: View {
                     Text("Metals are conductable, malleable, and shiny. Nonmetals are the complete opposite. And Metalloids have characteristics of both. They are seperated by a 'staircase' that starts from Boron and Aluminium.")
                         .padding(.top, -5.0)
                         .padding(.bottom, 20.0)
+                        .multilineTextAlignment(.center)
+
                 }
                 
                 Spacer()

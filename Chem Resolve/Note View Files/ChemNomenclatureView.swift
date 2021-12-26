@@ -20,13 +20,14 @@ struct ChemNomenclatureView: View {
                     Text("The non-metals are written in the following order:\nB     Si     C     As     P     N     H     Te     Se     S     O     At     I     Br     Cl     F\nThat's why water is H2O and not OH2.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -4)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Numeric Prefixes:")
                             .fontWeight(.bold)) {
                     Text("In covalent compounds if there are multiple atoms you need to add a prefix in the name of the compound.")
                         .padding(.top, -5.0)
+                        .multilineTextAlignment(.center)
                     Image("prefix")
                         .scaleEffect(0.74)                        .frame(width: 300.0, height: 405.0)
                         .cornerRadius(10)

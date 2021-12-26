@@ -20,7 +20,7 @@ struct WaveParticleView: View {
                     Text("The idea that something can act like a wave, like in diffraction, BUT also a particle at other times.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -2)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Diffraction:")
@@ -28,7 +28,7 @@ struct WaveParticleView: View {
                     Text("Essentially splitting up waves to prove that waves behave like waves. Diffraction can lead to two kinds of change in amplitude.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -1)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Constructive Interference:")
@@ -36,7 +36,7 @@ struct WaveParticleView: View {
                     Text("Increased amplitude of the waves after a diffraction.\nThe amplitudes are added on top of each other.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: 2)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("Destructive Interference:")
@@ -44,14 +44,14 @@ struct WaveParticleView: View {
                     Text("Decreased amplitude of the waves after a diffraction.\nThe average of the two amplitudes.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -13)
+                        .multilineTextAlignment(.center)
                 }
                 
                 GroupBox(label : Text("The De Broglie Relation:")
                             .fontWeight(.bold)) {
                     Text("How a wave also has mass, because of the duality principle, which leads wavelengths to be proportional to mass in the form of Momentum (p)")
                         .padding(.top, -5.0)
-                        .offset(x: 1)
+                        .multilineTextAlignment(.center)
                     Image("broglie")
                         .scaleEffect(0.8)                        .frame(width: 70.0, height: 67.0)
                         .cornerRadius(10)
@@ -64,7 +64,7 @@ struct WaveParticleView: View {
                     Text("Uncertainty in momentum and uncertainty in position are inversly proportional up to a constant.")
                         .padding(.bottom, 20.0)
                         .padding(.top, -5.0)
-                        .offset(x: -16)
+                        .multilineTextAlignment(.center)
                 }
                 
                 

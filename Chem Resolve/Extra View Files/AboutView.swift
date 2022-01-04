@@ -54,6 +54,7 @@ struct AboutView: View {
                     }
                     .groupBoxStyle(PayPalGroupBox())
                     
+                    
                     GroupBox {
                         
                         Text("Venmo: @ThoGos")

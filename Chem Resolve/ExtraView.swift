@@ -63,10 +63,6 @@ struct ExtraView: View {
                             
                         }
                         
-                        NavigationLink(destination: MiniPeriodView()) {
-                            Text("Minimalist Periodic Table")
-                                .padding(.vertical, 4.5)
-                        }
                         
                         NavigationLink(destination: JavaliteView()) {
                             Text("Self-Written Chemistry Articles")
@@ -75,6 +71,7 @@ struct ExtraView: View {
                         
                     }
                     Text("Version: " + getVer())
+                        .padding(.bottom, 3.0)
                 }
             }
             
@@ -82,13 +79,6 @@ struct ExtraView: View {
         }
     }
 }
-
-struct MiniPeriodView: View {
-    var body: some View {
-        Image("neutroniphoneback").resizable(resizingMode: .stretch).ignoresSafeArea()
-    }
-}
-
 
 
 struct OrbitalTableView: View {
@@ -186,5 +176,6 @@ func getVer() -> String {
 struct ExtraView_Previews: PreviewProvider {
     static var previews: some View {
         ExtraView()
+                
     }
 }

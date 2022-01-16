@@ -33,7 +33,7 @@ struct ElectronView: View {
                 }
                 
                 Text("The MORE energy the electron has, the further away from the nucleus it is.")
-                    .fontWeight(.bold)
+                    .fontWeight(.medium)
                     .multilineTextAlignment(.center)
                     .padding(.vertical, 10.0)
                 

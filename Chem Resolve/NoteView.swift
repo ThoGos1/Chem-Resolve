@@ -219,6 +219,47 @@ struct NoteView: View {
                     
                 }
                 
+                Group {
+                    
+                    NavigationLink(destination: LewVESPRView()) {
+                        HStack {
+                            Image(systemName: "app.connected.to.app.below.fill")
+                                .frame(width: 20.0, height: 40)
+                                .scaleEffect(1.1)
+                            Text("Lewis Structures")
+                        }
+                    }
+                    
+                    NavigationLink(destination: VSEPRView()) {
+                        HStack {
+                            Image(systemName: "point.3.filled.connected.trianglepath.dotted")
+                                .frame(width: 20.0, height: 40)
+                                .scaleEffect(1.1)
+                            Text("VSEPR Model")
+                        }
+                    }
+                    
+                    NavigationLink(destination: ValenTheoView()) {
+                        HStack {
+                            Image(systemName: "circle.grid.2x1")
+                                .frame(width: 20.0, height: 40)
+                                .scaleEffect(1.1)
+                            Text("Valence-Bond Theory")
+                        }
+                    }
+                    
+                    NavigationLink(destination: HybridnPromoView()) {
+                        HStack {
+                            Image(systemName: "arrow.up.to.line.circle")
+                                .frame(width: 20.0, height: 40)
+                                .scaleEffect(1.1)
+                            Text("Hybridization and Promotion")
+                        }
+                    }
+                    
+                    
+                }
+                
                 
                 
             }
